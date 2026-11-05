@@ -4,7 +4,9 @@
 
 ## 打开方式
 
-直接用浏览器打开 `dangjian-strategic-thinking.html` 即可（单文件，无构建步骤、无外部依赖，字体缺失时回退系统字体）。
+本地：直接用浏览器打开 `index.html`（单文件，无构建步骤、无外部依赖，字体缺失时回退系统字体）。
+
+线上：https://xingce-3v2.pages.dev/ —— 云端的根路径只会找 `index.html`，所以页面主文件名必须是它；`dangjian-strategic-thinking.html` 只是给旧链接留的跳转页。
 
 ## 页面结构
 
@@ -24,7 +26,8 @@
 ## 目录
 
 ```
-dangjian-strategic-thinking.html   页面本体（HTML/CSS/JS 全内联）
+index.html                         页面本体（HTML/CSS/JS 全内联）
+dangjian-strategic-thinking.html   旧链接的跳转页（→ 首页）
 assets/img/                        实景与档案图片（已裁切去水印）
 assets/video/opening.mp4           片头素材（1280×720，5.5MB）
 casamomo-teardown.html             早期版式研究稿（未在站点中使用）

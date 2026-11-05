@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>战略思维 · 习近平党建思想的实践脉络</title>
+<meta name="description" content="从正定到新时代：五个阶段的实践，七种科学思想方法，一次上升。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;600;900&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* ═══════════ tokens ═══════════ */
+:root{
+  --paper:#F4F0E7;
+  --paper-2:#EBE5D7;
+  --paper-3:#E3DCCB;
+  --ink:#16130F;
+  --ink-2:#3B372E;
+  --ink-3:rgba(22,19,15,.5);
+  --line:rgba(22,19,15,.15);
+  --line-2:rgba(22,19,15,.08);
+  --red:#9A1B14;
+  --red-2:#7A110C;
+  --red-3:#B8402F;
+  --gold:#A28455;
+  --dark:#100E0B;
+  --serif:"Noto Serif SC","Songti SC","STSong",SimSun,serif;
+  --sans:"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --latin:"Instrument Serif","Times New Roman",serif;
+  --wrap:1280px;
+  --pad:clamp(20px,4.8vw,64px);
+  --ease:cubic-bezier(.19,1,.22,1);
+  --ease-2:cubic-bezier(.22,.61,.24,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;
+  font-size:16px;line-height:1.95;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,p,ul,ol,figure,blockquote,details{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--red);color:var(--paper)}
+:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:var(--pad)}
+.skip{position:fixed;left:12px;top:-60px;z-index:200;background:var(--red);color:#fff;padding:10px 16px;font-size:13px;transition:top .3s}
+.skip:focus{top:12px}
+
+/* ═══════════ chrome ═══════════ */
+.progress{position:fixed;inset:0 0 auto;height:2px;z-index:120}
+.progress i{display:block;height:100%;background:var(--red);transform:scaleX(0);transform-origin:0 50%;will-change:transform}
+.meta-bar{position:fixed;inset:0 0 auto;z-index:110;display:flex;justify-content:space-between;
+  padding:18px var(--pad);font-size:11px;letter-spacing:.24em;color:var(--ink-3);pointer-events:none}
+.nav{position:fixed;right:clamp(10px,2.2vw,30px);top:50%;transform:translateY(-50%);z-index:110;
+  display:flex;flex-direction:column;align-items:flex-end;gap:13px}
+.nav a{display:flex;align-items:center;gap:9px;font-size:10.5px;letter-spacing:.16em;color:var(--ink-3);
+  transition:color .4s,opacity .4s}
+.nav a b{font-family:var(--latin);font-weight:400;font-size:13px;letter-spacing:0}
+.nav a i{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.45;transition:all .45s var(--ease-2);flex:none}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--red)}
+.nav a.on i{background:var(--red);opacity:1;box-shadow:0 0 0 4px rgba(154,27,20,.12)}
+.nav.light a{color:rgba(241,233,216,.82)}
+.nav.light a:hover{color:#F1E9D8}
+.nav.light a.on{color:#DE9384}
+.nav.light a.on i{background:#DE9384;box-shadow:0 0 0 4px rgba(222,147,132,.16)}
+/* 图片压到导航时：整体反白 + 右侧柔和遮罩 */
+.nav{isolation:isolate}
+.nav::before{content:"";position:absolute;inset:-90px -34px -90px -190px;z-index:-1;opacity:0;
+  transition:opacity .55s var(--ease-2);pointer-events:none;
+  background:radial-gradient(72% 62% at 96% 50%,rgba(16,14,11,.86) 0%,rgba(16,14,11,.55) 46%,rgba(16,14,11,0) 82%)}
+.nav.light::before{opacity:1}
+@media (max-width:1179px){
+  .nav a b,.nav a span{display:none}  .nav a.on i{box-shadow:0 0 0 3px rgba(154,27,20,.14)}
+}
+@media (max-width:640px){
+  .meta-bar{display:none}
+  .nav{display:none}
+}
+
+/* ═══════════ reveal ═══════════ */
+.js [data-rv]{opacity:0;transform:translateY(26px);
+  transition:opacity 1.05s var(--ease-2),transform 1.05s var(--ease-2);transition-delay:var(--d,0ms)}
+.js [data-rv].in{opacity:1;transform:none}
+.ln{display:block;overflow:hidden;padding-bottom:.09em;margin-bottom:-.09em}
+.ln>i{display:block;font-style:normal;transform:translateY(108%);
+  transition:transform 1.25s var(--ease);transition-delay:var(--d,0ms);will-change:transform}
+.in .ln>i,[data-rv].in .ln>i{transform:none}
+
+/* ═══════════ 片头 · 文字遮罩 ═══════════ */
+.film{position:relative;height:220vh;background:#0D0C0A}
+.film__pin{position:sticky;top:0;height:100svh;overflow:hidden;display:grid;place-items:center;background:#0D0C0A}
+.film__mask{position:absolute;inset:0;clip-path:url(#filmClip);will-change:transform;transform-origin:50% 50%}
+.film__mask video{display:block;width:100%;height:100%;object-fit:cover;filter:contrast(1.08) saturate(1.06) brightness(.96)}
+.film__full{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;will-change:opacity}
+.film__veil{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s var(--ease-2);
+  background:radial-gradient(118% 88% at 50% 42%,rgba(10,9,7,0) 38%,rgba(10,9,7,.52) 100%)}
+.film__sheet{position:absolute;left:0;right:0;bottom:0;height:40vh;pointer-events:none;opacity:0;
+  background:linear-gradient(to top,var(--paper) 0%,rgba(244,240,231,.92) 34%,rgba(244,240,231,.46) 66%,rgba(244,240,231,0) 100%)}
+.film__hint{position:absolute;left:var(--pad);bottom:clamp(22px,3.4vh,34px);display:flex;align-items:center;gap:11px;
+  font-size:10.5px;letter-spacing:.22em;color:rgba(241,233,216,.62);transition:opacity .5s var(--ease-2)}
+.film__hint i{width:42px;height:1px;background:var(--red);display:block;transform-origin:0 50%;
+  animation:cue 2.6s var(--ease-2) infinite}
+.film__defs{position:absolute;width:0;height:0;overflow:hidden}
+body.is-film .nav,body.is-film .meta-bar,body.is-film .progress{opacity:0;pointer-events:none}
+body .nav,body .meta-bar{transition:opacity .5s var(--ease-2)}
+
+/* ═══════════ hero ═══════════ */
+.hero{position:relative;min-height:100svh;overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,1fr) clamp(300px,39vw,570px);
+  column-gap:clamp(26px,3.6vw,64px);
+  padding-inline:max(var(--pad),calc((100vw - 1240px)/2 + 66px)) max(var(--pad),calc((100vw - 1240px)/2 + 26px));
+  padding-block:clamp(56px,7.4vh,90px) clamp(30px,4.4vh,50px)}
+.hero__type{display:flex;flex-direction:column;min-width:0}
+.eyebrow{font-size:clamp(12px,1.05vw,14px);letter-spacing:.4em;color:var(--ink-2);margin-bottom:clamp(16px,2.4vh,30px)}
+.eyebrow::before{content:"";display:block;width:36px;height:2px;background:var(--red);
+  margin-bottom:clamp(14px,2.2vh,22px)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(64px,9.4vw,148px);line-height:.98;
+  letter-spacing:.02em}
+/* 五段索引 */
+.hero__index{list-style:none;margin:clamp(22px,3.4vh,40px) 0 0;padding:0;
+  border-top:1px solid var(--line);max-width:34em}
+.hero__index li{border-bottom:1px solid var(--line)}
+.hero__index a{display:flex;align-items:baseline;gap:clamp(10px,1.4vw,22px);
+  padding:clamp(9px,1.35vh,15px) 2px;color:var(--ink);
+  transition:color .3s var(--ease-2),padding-left .45s var(--ease-2)}
+.hero__index b{font-family:var(--serif);font-weight:600;font-size:clamp(16px,1.42vw,21px);
+  letter-spacing:.08em;min-width:4.6em}
+.hero__index em{font-style:normal;font-size:11.5px;letter-spacing:.16em;color:var(--ink-3);white-space:nowrap}
+.hero__index em s{text-decoration:none;color:var(--red);margin-right:.5em}
+.hero__index i{margin-left:auto;font-style:normal;font-size:13px;color:var(--ink-3);
+  transition:transform .4s var(--ease-2),color .3s}
+.hero__index a:hover{color:var(--red);padding-left:10px}
+.hero__index a:hover i{color:var(--red);transform:translateX(3px)}
+.hero__photo{position:relative;margin:0;overflow:hidden;background:#1c1710;border-radius:2px}
+.hero__photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:52% 46%;
+  filter:saturate(.95) contrast(1.03) brightness(.98);transform:scale(1.02);transition:transform 1.8s var(--ease-2)}
+.hero__photo:hover img{transform:scale(1.05)}
+.hero__photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(20,17,14,.14) 0%,rgba(20,17,14,0) 22%,rgba(20,17,14,0) 66%,rgba(20,17,14,.5) 100%)}
+.hero__photo figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:0 clamp(14px,1.6vw,22px) clamp(12px,1.8vh,18px);
+  display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  font-size:10px;letter-spacing:.18em;color:rgba(244,240,231,.88)}
+.hero__foot{margin-top:auto;padding-top:clamp(26px,4.4vh,52px);
+  display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.hero__lede{max-width:30em;font-size:clamp(13.5px,1.02vw,15.5px);line-height:1.95;color:var(--ink-2);
+  padding-left:16px;border-left:2px solid var(--red)}
+.cue{display:flex;align-items:center;gap:11px;font-size:10.5px;letter-spacing:.22em;color:var(--ink-3);white-space:nowrap}
+.cue i{width:42px;height:1px;background:var(--red);transform-origin:0 50%;animation:cue 2.6s var(--ease-2) infinite}
+@keyframes cue{0%,100%{transform:scaleX(.25)}50%{transform:scaleX(1)}}
+@media (max-width:1339px){
+  .hero{grid-template-columns:minmax(0,1fr) clamp(300px,40vw,520px);
+    padding-right:calc(max(var(--pad),calc((100vw - 1240px)/2 + 26px)) + 112px)}
+  .hero h1{font-size:clamp(60px,8.8vw,116px)}
+}
+@media (max-width:1179px){
+  .hero{grid-template-columns:minmax(0,1fr) clamp(230px,30vw,320px);
+    padding-right:calc(max(var(--pad),calc((100vw - 1240px)/2 + 26px)) + 44px)}
+}
+@media (max-width:900px){
+  .hero{grid-template-columns:minmax(0,1fr);min-height:0;
+    padding-inline:20px;padding-block:clamp(46px,6vh,66px) clamp(8px,2vh,18px);row-gap:0}
+  .hero__type{min-height:0}
+  .hero__photo{order:2;width:100%;height:46vh;min-height:270px;margin-top:clamp(22px,3.6vh,30px)}
+  .hero__foot{margin-top:clamp(22px,3.6vh,30px);flex-direction:column;align-items:flex-start;gap:14px}
+  .hero h1{font-size:clamp(58px,15.4vw,100px)}
+  .hero__index{margin-top:clamp(18px,3vh,26px)}
+}
+
+/* ═══════════ intro ═══════════ */
+.intro{padding-block:clamp(76px,12vh,160px) clamp(56px,8vh,100px)}
+.intro h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4.1vw,56px);line-height:1.44;
+  letter-spacing:.01em;max-width:19em}
+.intro h2 em{font-style:normal;color:var(--red)}
+.intro .lede{margin-top:clamp(26px,4vh,44px);font-size:clamp(15.5px,1.28vw,18px);line-height:2.05;
+  color:var(--ink-2);max-width:34em}
+.tl{position:relative;margin-top:clamp(40px,6vh,72px);border-top:1px solid var(--line)}
+.tl__fill{position:absolute;left:0;top:-1px;height:1px;background:var(--red);width:100%;
+  transform:scaleX(var(--p,0));transform-origin:0 50%;will-change:transform}
+.tl ol{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.tl li{position:relative;padding-top:clamp(14px,2vh,22px)}
+.tl li::before{content:"";position:absolute;left:0;top:-4px;width:7px;height:7px;border-radius:50%;
+  background:var(--paper);border:1px solid var(--line);transition:all .5s}
+.tl li.on::before{background:var(--red);border-color:var(--red);box-shadow:0 0 0 4px rgba(154,27,20,.1)}
+.tl b{display:block;font-family:var(--latin);font-weight:400;font-size:clamp(19px,2.1vw,27px);line-height:1;letter-spacing:0}
+.tl span{display:block;margin-top:5px;font-size:11px;letter-spacing:.14em;color:var(--ink-3)}
+.tl li.on span{color:var(--ink-2)}
+@media (max-width:640px){
+  .tl{margin-top:clamp(30px,5vh,48px)}
+  .tl ol{grid-template-columns:repeat(5,minmax(0,1fr));gap:4px}
+  .tl b{font-size:clamp(15px,4.6vw,19px)}
+  .tl span{font-size:9.5px;letter-spacing:.04em;margin-top:6px}
+  .tl li{padding-top:14px}
+}
+
+/* ═══════════ marquee ═══════════ */
+.marquee{overflow:hidden;border-block:1px solid var(--line);padding-block:14px;background:var(--paper-2)}
+.marquee__t{display:flex;width:max-content;animation:mv 44s linear infinite;line-height:1.4}
+.marquee__t span{display:flex;align-items:center;gap:24px;padding-right:24px;
+  font-family:var(--serif);font-weight:600;font-size:clamp(14px,1.4vw,19px);letter-spacing:.2em;color:var(--ink-2);white-space:nowrap}
+.marquee__t span::after{content:"·";color:var(--red);letter-spacing:0}
+@keyframes mv{to{transform:translateX(-50%)}}
+
+/* ═══════════ chapters ═══════════ */
+.ch{display:grid;grid-template-columns:minmax(0,.97fr) minmax(0,1.03fr);
+  gap:clamp(30px,5.6vw,96px);align-items:start;
+  padding-block:clamp(68px,10vh,130px);border-top:1px solid var(--line-2)}
+#chapters .ch:first-child{border-top:0}
+.ch__txt{min-width:0}
+.ch__meta{display:flex;align-items:baseline;gap:14px;font-size:11px;letter-spacing:.22em;color:var(--ink-3);
+  margin-bottom:clamp(14px,2.2vh,24px)}
+.ch__meta b{font-family:var(--serif);font-weight:600;font-size:13.5px;letter-spacing:.1em;color:var(--red)}
+.ch__yr{font-family:var(--latin);font-size:clamp(21px,2.4vw,30px);letter-spacing:0;color:var(--ink);line-height:1}
+.ch__h{font-family:var(--serif);font-weight:900;font-size:clamp(46px,6.6vw,100px);line-height:1.04;letter-spacing:.03em}
+.ch__sub{margin-top:clamp(8px,1.4vh,14px);font-size:clamp(12.5px,1.05vw,14.5px);letter-spacing:.08em;color:var(--red)}
+.ch__lede{margin-top:clamp(18px,2.6vh,28px);font-size:clamp(15px,1.2vw,17px);line-height:2.05;
+  color:var(--ink-2);max-width:25em}
+.ch__q{margin-top:clamp(18px,2.8vh,28px);padding-left:16px;border-left:2px solid var(--red);
+  font-family:var(--serif);font-weight:600;font-size:clamp(16.5px,1.45vw,20px);line-height:1.8;color:var(--ink);max-width:21em}
+.ch__xtra{display:inline-flex;align-items:center;gap:8px;margin-top:clamp(18px,2.6vh,26px);
+  font-size:12px;letter-spacing:.08em;color:var(--ink-3);border-bottom:1px solid var(--line);padding-bottom:3px;
+  transition:color .4s,border-color .4s}
+.ch__xtra:hover{color:var(--red);border-color:var(--red)}
+.ch__xtra svg{width:9px;height:9px}
+
+/* docs accordion */
+.docs{margin-top:clamp(22px,3.2vh,32px);border-top:1px solid var(--line)}
+.doc{border-bottom:1px solid var(--line)}
+.doc__h{display:flex;align-items:baseline;gap:12px;width:100%;padding:15px 0;background:none;border:0;
+  font:inherit;color:inherit;text-align:left;cursor:pointer}
+.doc__h em{font-family:var(--latin);font-style:normal;font-size:11.5px;color:var(--gold);flex:none;width:18px;
+  transition:color .4s}
+.doc__t{flex:1;min-width:0;font-size:15px;line-height:1.6;letter-spacing:.01em;color:var(--ink);transition:color .35s}
+.doc__m{flex:none;font-size:10.5px;letter-spacing:.1em;color:var(--ink-3);white-space:nowrap}
+.doc__i{position:relative;width:11px;height:11px;flex:none;align-self:center}
+.doc__i::before,.doc__i::after{content:"";position:absolute;background:var(--red);transition:transform .5s var(--ease-2)}
+.doc__i::before{left:0;top:5px;width:11px;height:1px}
+.doc__i::after{left:5px;top:0;width:1px;height:11px}
+.doc.open .doc__i::after{transform:scaleY(0)}
+.doc__h:hover .doc__t{color:var(--red)}
+.doc__h:hover em{color:var(--red)}
+.doc__w{display:grid;grid-template-rows:0fr;transition:grid-template-rows .55s var(--ease)}
+.doc.open .doc__w{grid-template-rows:1fr}
+.doc__b{overflow:hidden;min-height:0}
+.doc__b ol{counter-reset:d;margin:2px 0 16px;padding:0}
+.doc__b li{position:relative;padding-left:24px;font-size:13.8px;line-height:1.95;color:var(--ink-2);margin-bottom:5px;counter-increment:d}
+.doc__b li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:.28em;
+  font-family:var(--latin);font-size:10.5px;color:var(--red);opacity:.8}
+.doc__b b{font-weight:500;color:var(--ink)}
+.doc__b li b::after{content:"\3000";font-weight:400}
+.doc__b p{font-size:13.8px;line-height:1.95;color:var(--ink-2);margin-bottom:12px}
+.doc__link{display:inline-flex;align-items:center;gap:7px;margin:0 0 18px;font-size:11.5px;
+  letter-spacing:.06em;color:var(--red);border-bottom:1px solid rgba(154,27,20,.3);padding-bottom:2px}
+.doc__link:hover{border-bottom-color:var(--red)}
+.doc__links{display:flex;flex-wrap:wrap;gap:6px 20px;margin-bottom:16px}
+.doc__links .doc__link{margin:0}
+.doc__link svg{width:9px;height:9px}
+
+/* 双图版（同一时期的两张影像） */
+.plate-stack{position:sticky;top:8vh;display:flex;flex-direction:column;gap:clamp(10px,1.4vh,18px)}
+.plate-stack .plate{position:static;top:auto;height:auto}
+
+/* plate */
+.plate{position:sticky;top:8vh;margin:0;height:min(78vh,780px);background:var(--paper-2);
+  color:var(--ink);overflow:hidden;isolation:isolate;clip-path:inset(0 0 100% 0);
+  transition:clip-path 1.45s var(--ease)}
+.plate.in{clip-path:inset(0 0 0 0)}
+.plate__in{position:absolute;inset:-8% 0;will-change:transform}
+.plate svg{width:100%;height:100%}
+.plate::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.4;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='120' height='120' filter='url(%23n)' opacity='.4'/></svg>")}
+.plate__cap{position:absolute;left:0;bottom:0;display:flex;gap:12px;align-items:center;
+  padding:11px 16px;background:var(--paper);font-size:10px;letter-spacing:.22em;color:var(--ink-3)}
+.plate__cap b{font-weight:400;color:var(--red);letter-spacing:.16em}
+
+/* 照片版图版 */
+.plate--photo{height:auto;background:var(--paper);clip-path:none}
+.plate--photo::before,.plate--photo::after{display:none}
+.plate--photo img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;
+  object-position:58% 50%;opacity:0;transform:translateY(10%);background:#1c1710;
+  transition:transform 1.2s var(--ease), opacity .95s var(--ease)}
+.plate--photo.in img{opacity:1;transform:none}
+.plate--photo::before{content:"";position:absolute;inset:auto 0 0 0;height:36%;z-index:1;pointer-events:none;
+  background:linear-gradient(to top,rgba(14,11,7,.42),transparent)}
+.plate--photo .plate__cap{z-index:2;position:static;display:flex;gap:10px;align-items:baseline;
+  background:none;color:var(--ink-3);border-top:1px solid var(--line);
+  padding:10px 2px 0;font-size:11.5px;letter-spacing:.12em;margin-top:0}
+.plate--photo .plate__cap b{color:var(--red);letter-spacing:.16em}
+.plate--photo .plate__cap span{color:var(--ink-4);font-size:10.5px}
+
+/* 全幅照片带 */
+.band{position:relative;margin:clamp(40px,7vh,80px) 0 0;overflow:hidden;
+  height:clamp(230px,42vh,430px);background:#1c1710}
+.band__in{position:absolute;inset:-12% 0;will-change:transform}
+.band img{width:100%;height:100%;object-fit:cover;object-position:52% 46%}
+.band::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to top,rgba(14,11,7,.34),transparent 42%)}
+.band__cap{position:absolute;left:calc(max(0px, (100vw - 1280px)/2) + var(--pad));bottom:clamp(16px,2.6vw,26px);z-index:2;
+  display:flex;gap:10px;align-items:baseline;background:var(--paper);color:var(--ink-2);
+  padding:9px 15px;font-size:11.5px;letter-spacing:.12em}
+.band__cap b{font-family:var(--serif);font-weight:600;color:var(--red);letter-spacing:.18em}
+.band__cap span{color:var(--ink-4);font-size:10.5px}
+
+/* 影像档案 · 底片 */
+.arch{margin-top:clamp(28px,4.2vw,52px);display:grid;grid-template-columns:repeat(6,1fr);
+  gap:clamp(12px,1.7vw,22px)}
+.arch figure{margin:0;overflow:hidden}
+.arch__wide{grid-column:span 6}
+.arch__half{grid-column:span 3}
+.arch img{display:block;width:100%;height:auto;object-fit:cover;background:#1c1710;
+  transform:scale(1.04);transition:transform 1.5s var(--ease), filter .8s var(--ease);
+  filter:saturate(.9) contrast(1.03)}
+.arch.in img{transform:none}
+.arch figure:hover img{transform:scale(1.025);filter:saturate(1) contrast(1.05)}
+.arch__wide img{aspect-ratio:3.2/1}
+.arch__pano img{aspect-ratio:16/9}
+.arch__half img{aspect-ratio:3/2}
+.arch figcaption{display:flex;gap:10px;align-items:baseline;margin:0;padding:10px 2px 0;
+  border-top:1px solid var(--line);color:var(--ink-3);font-size:11.5px;letter-spacing:.12em}
+.arch figcaption b{font-weight:400;color:var(--red);letter-spacing:.16em}
+.arch figcaption span{color:var(--ink-4);font-size:10.5px}
+@media(max-width:900px){
+  .arch{grid-template-columns:1fr 1fr}
+  .arch__wide{grid-column:span 2}
+  .arch__half{grid-column:span 1}
+}
+@media(max-width:760px){
+  .arch{grid-template-columns:1fr}
+  .arch__wide,.arch__half{grid-column:span 1}
+  .arch__wide img{aspect-ratio:16/9}
+  .arch__half img{aspect-ratio:3/2}
+}
+.ch--flip .ch__txt{order:2}
+.ch--flip .plate{order:1}
+.spin{animation:rot 90s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+@media (max-width:900px){
+  .ch{grid-template-columns:minmax(0,1fr);padding-block:clamp(52px,7.5vh,78px)}
+  .ch__txt,.ch--flip .ch__txt{order:0}
+  .plate,.ch--flip .plate{position:relative;top:0;height:min(56vh,400px);order:-1;margin-bottom:26px}
+  .plate-stack{position:relative;top:0;order:-1;margin-bottom:22px;gap:12px}
+  .plate--photo,.ch--flip .plate--photo{height:auto;margin-bottom:22px}
+  .plate-stack .plate--photo{margin-bottom:0}
+  .ch__h{font-size:clamp(40px,11.5vw,60px)}
+}
+
+/* ═══════════ sections ═══════════ */
+.sec{padding-block:clamp(68px,11vh,130px);border-top:1px solid var(--line)}
+.sec__head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.78fr);gap:clamp(22px,5vw,76px);
+  align-items:end;margin-bottom:clamp(30px,4.6vh,54px)}
+.sec__head h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4.2vw,60px);line-height:1.36;letter-spacing:.01em}
+.sec__head h2 em{font-style:normal;color:var(--red)}
+.sec__head p{font-size:14px;line-height:2;color:var(--ink-3);max-width:23em}
+@media (max-width:820px){.sec__head{grid-template-columns:minmax(0,1fr);align-items:start}}
+
+.dims{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line)}
+.dim{position:relative;background:var(--paper);padding:clamp(24px,3.2vw,42px);overflow:hidden;
+  min-height:clamp(200px,25vh,275px);display:flex;flex-direction:column;justify-content:space-between;
+  transition:background .6s var(--ease-2);will-change:transform}
+.dim::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s;
+  background:radial-gradient(340px circle at var(--mx,50%) var(--my,50%),rgba(154,27,20,.14),transparent 68%)}
+.dim:hover::after{opacity:1}
+.dim__n{font-family:var(--latin);font-size:12.5px;letter-spacing:.1em;color:var(--gold);transition:color .5s}
+.dim:hover .dim__n{color:var(--red)}
+.dim h3{font-family:var(--serif);font-weight:600;font-size:clamp(21px,2.3vw,31px);letter-spacing:.06em;
+  margin-top:auto;padding-top:16px}
+.dim p{margin-top:9px;font-size:13.8px;line-height:1.95;color:var(--ink-2);max-width:25em}
+.dim__bar{position:absolute;left:0;top:0;height:2px;width:0;background:var(--red);
+  transition:width .9s var(--ease-2) .15s}
+.dim.in .dim__bar{width:100%}
+/* 七条版式：最后一条通栏，标题与说明左右分置 */
+.dims--7 .dim{min-height:0;justify-content:flex-start;padding:clamp(20px,2.6vw,34px)}
+.dims--7 .dim h3{margin-top:14px;padding-top:0}
+.dims--7 .dim p{margin-top:10px}
+.dims--7 .dim:last-child{grid-column:1/-1}
+.dims--7 .dim:last-child > div{display:grid;grid-template-columns:minmax(0,210px) minmax(0,1fr);
+  gap:clamp(16px,2.4vw,36px);align-items:baseline}
+.dims--7 .dim:last-child h3{padding-top:0}
+.dims--7 .dim:last-child p{margin-top:0;max-width:34em}
+.threads{margin-top:clamp(34px,4.6vh,54px);border-top:1px solid var(--line);padding-top:clamp(18px,2.4vh,26px)}
+.threads__h{font-size:11px;letter-spacing:.2em;color:var(--ink-3);margin-bottom:16px}
+.threads__l{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,1.8vw,26px);
+  margin:0;padding:0;list-style:none}
+.threads__l li{font-size:12.5px;line-height:1.85;color:var(--ink-3)}
+.threads__l b{display:block;margin-bottom:4px;font-weight:500;font-size:13.5px;color:var(--ink)}
+.phases{margin-top:clamp(40px,5.4vh,64px);border-top:1px solid var(--line);padding-top:clamp(20px,2.8vh,30px)}
+.phases__h{display:flex;align-items:baseline;gap:14px;font-size:11px;letter-spacing:.2em;color:var(--ink-3)}
+.phases__h em{font-family:var(--latin);font-style:normal;font-size:15px;letter-spacing:.02em;color:var(--red)}
+.phases__l{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,30px);
+  margin:18px 0 0;padding:0;list-style:none}
+.phases__l li{border-top:2px solid var(--line);padding-top:13px}
+.phases__l b{display:block;font-family:var(--latin);font-weight:400;font-size:19px;letter-spacing:.01em}
+.phases__l i{display:block;font-style:normal;margin-top:3px;font-size:13.5px;letter-spacing:.08em;color:var(--red)}
+.phases__l span{display:block;margin-top:8px;font-size:11.5px;line-height:1.8;color:var(--ink-3)}
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(14px,2.2vh,24px) clamp(28px,4.4vw,64px);margin-top:clamp(30px,4vh,46px)}
+.quotes p{margin:0;display:grid;grid-template-columns:64px minmax(0,1fr);gap:14px;
+  font-size:13.5px;line-height:1.9;color:var(--ink-2)}
+.quotes b{font-family:var(--latin);font-weight:400;font-size:12px;letter-spacing:.02em;color:var(--ink-4);padding-top:3px}
+.quotes__h{font-size:11px;letter-spacing:.2em;color:var(--ink-3)}
+.gloss{margin-top:clamp(34px,4.6vh,54px);border-top:1px solid var(--line);padding-top:clamp(18px,2.4vh,26px)}
+.gloss__h{font-size:11px;letter-spacing:.2em;color:var(--ink-3);margin-bottom:16px}
+.gloss__l{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,30px)}
+.gloss__l b{display:block;font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:.08em;color:var(--red)}
+.gloss__l p{margin-top:7px;font-size:11.8px;line-height:1.9;color:var(--ink-3)}
+@media (max-width:820px){.gloss__l{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}}
+@media (max-width:820px){
+  .threads__l{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 20px}
+  .phases__l{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px}
+  .quotes{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .threads__l{grid-template-columns:minmax(0,1fr)}
+  .dims--7 .dim:last-child > div{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  .dims{grid-template-columns:minmax(0,1fr)}
+  .dim{min-height:0}
+}
+
+.stair{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1.4vw,20px);
+  align-items:end;margin-top:clamp(22px,3.4vh,40px)}
+.step{position:relative;padding-top:20px;border-top:1px solid var(--line)}
+.step::before{content:"";position:absolute;left:0;top:-1px;height:1px;width:0;background:var(--red);
+  transition:width 1.1s var(--ease) .15s}
+.stair.in .step::before{width:100%}
+.step:nth-child(1){margin-bottom:0}
+.step:nth-child(2){margin-bottom:clamp(16px,3vw,44px)}
+.step:nth-child(3){margin-bottom:clamp(32px,6vw,88px)}
+.step:nth-child(4){margin-bottom:clamp(48px,9vw,132px)}
+.step em{display:block;font-family:var(--latin);font-style:normal;font-size:12.5px;letter-spacing:.12em;
+  color:var(--red);margin-bottom:9px}
+.step b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(16.5px,1.85vw,23px);
+  letter-spacing:.06em;margin-bottom:5px}
+.step span{display:block;font-size:12px;line-height:1.85;color:var(--ink-3)}
+@media (max-width:760px){
+  .stair{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px;align-items:start}
+  .step{margin-bottom:0!important}
+}
+
+/* ═══════════ 文字轨迹 ═══════════ */
+.sec--trace{border-top:1px solid var(--line);position:relative;background:var(--paper)}
+.dstage{position:relative;height:clamp(420px,56vh,540px);overflow:hidden;cursor:crosshair}
+.dstage__layer{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+@media (hover:none){.dstage{cursor:default}}
+/* 轨迹字 */
+.cw{position:absolute;left:0;top:0;white-space:nowrap;display:flex;align-items:baseline;gap:.34em;
+  font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.55vw,35px);letter-spacing:.09em;
+  color:var(--ink);will-change:transform,opacity;transform-origin:50% 50%}
+.cw i{font-family:var(--latin);font-style:normal;font-size:.36em;letter-spacing:.1em;color:var(--red);
+  transform:translateY(-.85em)}
+/* 减少动效 / 无指针时的静态铺陈 */
+.cw--static{opacity:.16}
+.cw--ghost{opacity:.17;transition:opacity .9s var(--ease-2)}
+.dstage.is-live .cw--ghost{opacity:0}
+@media (max-width:760px){
+  .dstage{height:clamp(420px,62vh,520px)}
+  .cw{font-size:clamp(19px,5.4vw,26px)}
+}
+
+/* ── 十四个坚持 · 掉落 ── */
+.sec--fall{border-top:1px solid var(--line);background:var(--paper);position:relative}
+.fall{position:relative;height:clamp(470px,59vh,580px);overflow:hidden;cursor:default}
+.fall__text{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;
+  gap:0 clamp(24px,3vw,54px);align-content:center;
+  padding:clamp(20px,4vh,46px) max(var(--pad), calc((100vw - 1240px)/2 + 66px))}
+.fall__piece{position:relative;display:flex;gap:9px;align-items:baseline;
+  padding:9px 2px 10px;border-top:1px solid var(--line);background:var(--paper);
+  font-size:clamp(14px,1.16vw,17px);line-height:1.62;letter-spacing:.01em;color:var(--ink);
+  will-change:transform;transform-origin:50% 50%}
+.fall__piece i{font-family:var(--latin);font-style:normal;font-size:.66em;letter-spacing:.06em;
+  color:var(--red);flex:0 0 auto;padding-top:.24em}
+.fall[data-phase]{cursor:default}
+@media (hover:hover){.fall[data-phase] .fall__piece{cursor:grab}}
+.fall.is-drag .fall__piece{cursor:grabbing}
+.fall[data-phase] .fall__piece{background:#FAF7EE;outline:1px solid rgba(27,26,22,.14);outline-offset:-1px;
+  box-shadow:0 3px 8px -5px rgba(27,26,22,.28)}
+@media (max-width:900px){
+  .fall{height:clamp(560px,74vh,700px)}
+  .fall__text{grid-template-columns:1fr;gap:0;padding-inline:20px}
+  .fall__piece{font-size:13px;padding:7px 2px 8px}
+}
+@media (prefers-reduced-motion:reduce){
+  .fall{cursor:default;height:auto}
+  .fall__text{position:static;padding-block:clamp(34px,7vh,64px)}
+}
+
+/* ═══════════ close ═══════════ */
+.close{background:var(--dark);color:#F1E9D8;position:relative;overflow:hidden}
+.close::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(72% 62% at 80% 6%,rgba(154,27,20,.34),transparent 62%)}
+.close__plate{position:relative;margin:0;height:clamp(220px,38vh,410px);overflow:hidden;background:#0f0d0b}
+.close__plate img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 44%;
+  filter:saturate(.92) contrast(1.05) brightness(.88)}
+.close__plate::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(19,20,21,.42) 0%,rgba(19,20,21,0) 30%,rgba(19,20,21,.5) 74%,var(--dark) 100%)}
+.close__plate figcaption{position:absolute;z-index:2;bottom:clamp(14px,2vh,20px);
+  left:max(var(--pad),calc((100vw - 1240px)/2 + 66px));right:max(var(--pad),calc((100vw - 1240px)/2 + 66px));
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;
+  font-size:10px;letter-spacing:.18em;color:rgba(241,233,216,.72)}
+.close__inner{position:relative;padding-block:clamp(58px,9vh,110px) clamp(72px,12vh,140px)}
+.close h2{font-family:var(--serif);font-weight:600;font-size:clamp(28px,4.4vw,62px);line-height:1.38;
+  letter-spacing:.02em;color:#F8F2E4}
+.close .lede{color:rgba(241,233,216,.7);margin-top:clamp(18px,2.8vh,28px);font-size:clamp(14.5px,1.2vw,17px);
+  line-height:2.05;max-width:26em}
+.statement{margin-top:clamp(30px,4.6vh,52px);padding-left:clamp(16px,2.2vw,28px);border-left:2px solid var(--red-3)}
+.statement span{display:block;font-size:10px;letter-spacing:.26em;color:rgba(241,233,216,.48);margin-bottom:11px}
+.statement p{font-family:var(--serif);font-weight:600;font-size:clamp(18px,2.15vw,27px);line-height:1.8;
+  color:#FBF6EA;max-width:25em}
+.close__seal{position:absolute;right:var(--pad);top:clamp(46px,9vh,112px);width:clamp(66px,7.6vw,92px);aspect-ratio:1;
+  display:grid;place-content:center;text-align:center;line-height:1.3;font-family:var(--serif);font-weight:600;
+  font-size:clamp(14px,1.6vw,18px);letter-spacing:.13em;color:#D9604E;border:1.5px solid rgba(217,96,78,.55);
+  box-shadow:inset 0 0 0 3px rgba(217,96,78,.13);transform:rotate(-6deg) scale(.72);opacity:0;
+  transition:transform .95s var(--ease),opacity .95s var(--ease)}
+.close__seal.in{transform:rotate(-6deg) scale(1);opacity:1}
+@media (max-width:760px){.close__seal{display:none}}
+
+.qs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.8vw,38px);
+  margin-top:clamp(40px,6vh,72px);border-top:1px solid rgba(241,233,216,.15);padding-top:clamp(22px,3.2vh,34px)}
+.qs>div{border-left:1px solid rgba(241,233,216,.13);padding-left:clamp(12px,1.7vw,20px)}
+.qs em{display:block;font-family:var(--latin);font-style:normal;font-size:18px;color:#D9604E;margin-bottom:7px}
+.qs p{font-size:13.5px;line-height:1.95;color:rgba(241,233,216,.78)}
+@media (max-width:760px){.qs{grid-template-columns:minmax(0,1fr)}}
+
+.foot{background:var(--dark);color:rgba(241,233,216,.48);border-top:1px solid rgba(241,233,216,.11);
+  padding:24px 0 32px}
+.foot__row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:10.5px;letter-spacing:.18em}
+.foot b{font-weight:400;color:#F1E9D8}
+
+/* ═══════════ a11y ═══════════ */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js [data-rv]{opacity:1!important;transform:none!important}
+  .ln>i{transform:none!important}
+  .plate{clip-path:none!important}
+  .close__seal{opacity:1;transform:rotate(-6deg)}
+}
+@media print{
+  .nav,.progress,.meta-bar,.skip,.marquee{display:none}
+  body{background:#fff;color:#000}
+  .plate{clip-path:none;height:380px;position:static}
+  .doc__w{grid-template-rows:1fr}
+  .close,.foot{background:#fff;color:#000}
+  .close h2,.close .lede,.close p,.close span,.close .statement p,.foot *{color:#000!important}
+  .close::before{display:none}
+  .js [data-rv]{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#chapters">跳到正文</a>
+<div class="progress" aria-hidden="true"><i id="bar"></i></div>
+<div class="meta-bar"><span>课堂展示</span><span>2026 · 秋</span></div>
+
+<nav class="nav" aria-label="章节">
+  <a href="#intro"><b>00</b><span>导语</span><i></i></a>
+  <a href="#c1"><b>1983</b><span>正定</span><i></i></a>
+  <a href="#c2"><b>1988</b><span>宁德</span><i></i></a>
+  <a href="#c3"><b>2002</b><span>浙江</span><i></i></a>
+  <a href="#c4"><b>2007</b><span>上海</span><i></i></a>
+  <a href="#c5"><b>2012</b><span>新时代</span><i></i></a>
+  <a href="#close"><b>05</b><span>结语</span><i></i></a>
+</nav>
+
+<!-- ══════════ 片头：文字遮罩 ══════════ -->
+<section class="film" id="film" aria-label="片头">
+  <div class="film__pin">
+    <div class="film__mask" id="filmMask">
+      <video id="filmVideo" src="assets/video/opening.mp4" poster="assets/video/opening-poster.jpg"
+             muted loop autoplay playsinline preload="auto"></video>
+    </div>
+    <video class="film__full" id="filmFull" src="assets/video/opening.mp4" muted loop playsinline
+           preload="metadata" aria-hidden="true"></video>
+    <div class="film__veil" id="filmVeil" aria-hidden="true"></div>
+    <div class="film__sheet" id="filmSheet" aria-hidden="true"></div>
+    <p class="film__hint"><i></i>向下滚动</p>
+  </div>
+</section>
+
+<svg class="film__defs" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="filmClip" clipPathUnits="userSpaceOnUse">
+      <text id="filmT1" text-anchor="middle" font-family="Noto Serif SC, Songti SC, serif" font-weight="900" letter-spacing=".02em"></text>
+      <text id="filmT2" text-anchor="middle" font-family="Noto Serif SC, Songti SC, serif" font-weight="900" letter-spacing=".02em"></text>
+    </clipPath>
+  </defs>
+</svg>
+
+<!-- ══════════ hero ══════════ -->
+<header class="hero">
+  <div class="hero__type">
+    <p class="eyebrow">习近平党建思想中的</p>
+    <h1>
+      <span class="ln"><i style="--d:140ms">战略</i></span>
+      <span class="ln"><i style="--d:260ms">思维</i></span>
+    </h1>
+    <ol class="hero__index">
+      <li><a href="#c1"><b>正定</b><em><s>1983</s>作风破题</em><i>→</i></a></li>
+      <li><a href="#c2"><b>宁德</b><em><s>1988</s>固本强基</em><i>→</i></a></li>
+      <li><a href="#c3"><b>浙江</b><em><s>2002</s>制度治党</em><i>→</i></a></li>
+      <li><a href="#c4"><b>上海</b><em><s>2007</s>不辱门楣</em><i>→</i></a></li>
+      <li><a href="#c5"><b>新时代</b><em><s>2012</s>自我革命</em><i>→</i></a></li>
+    </ol>
+    <div class="hero__foot">
+      <p class="hero__lede">从正定到新时代，五个阶段长成一套方法。</p>
+      <span class="cue"><i></i>向下滚动</span>
+    </div>
+  </div>
+  <figure class="hero__photo">
+    <img src="assets/img/hall.jpg" alt="人民大会堂大礼堂" decoding="async">
+    <figcaption><span>人民大会堂 · 大礼堂</span><span>资料图片</span></figcaption>
+  </figure>
+</header>
+
+<main>
+<!-- ══════════ intro ══════════ -->
+<section class="intro wrap" id="intro">
+  <h2 data-rv>不是一次写就的文本，<br>而是<em>一条走出来的路</em>。</h2>
+  <p class="lede" data-rv style="--d:140ms">习近平党建思想的形成并非一蹴而就，而是与其个人从基层到中央的治理实践紧密相连。从正定到宁德，从浙江到上海，再到主政中央，每个阶段都留下了针对当时当地党建突出问题的实践探索；这些积累最终汇聚、升华为系统化的理论体系。</p>
+  <div class="tl" data-rv style="--d:240ms" id="tl">
+    <div class="tl__fill" id="tlFill"></div>
+    <ol>
+      <li><b>1983</b><span>正定</span></li>
+      <li><b>1988</b><span>宁德</span></li>
+      <li><b>2002</b><span>浙江</span></li>
+      <li><b>2007</b><span>上海</span></li>
+      <li><b>2012</b><span>新时代</span></li>
+    </ol>
+  </div>
+</section>
+
+<figure class="band" data-rv>
+  <div class="band__in" id="bandIn">
+    <img src="assets/img/field.jpg" alt="习近平在正定工作期间，与当地干部在田间查看庄稼长势。" loading="lazy">
+  </div>
+  <figcaption class="band__cap"><b>正定</b>田间地头 · 从实际出发 <span>新华社影像</span></figcaption>
+</figure>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__t">
+    <span>作风破题</span><span>固本强基</span><span>制度治党</span><span>不辱门楣</span><span>自我革命</span>
+    <span>作风破题</span><span>固本强基</span><span>制度治党</span><span>不辱门楣</span><span>自我革命</span>
+  </div>
+</div>
+
+<!-- ══════════ chapters ══════════ -->
+<section id="chapters">
+
+  <!-- 正定 -->
+  <article class="ch wrap" id="c1">
+    <div class="ch__txt">
+      <div class="ch__meta" data-rv><b>壹</b><span>正定</span><span class="ch__yr">1983</span></div>
+      <h2 class="ch__h" data-rv style="--d:60ms"><span class="ln"><i>作风破题</i></span></h2>
+      <p class="ch__sub" data-rv style="--d:150ms">从“六项规定”破题，抓基层班子</p>
+      <p class="ch__lede" data-rv style="--d:220ms">干部纪律松弛、作风漂浮。他没有先讲道理，先立规矩——把“怎么当干部”写成六条，摆在桌上。</p>
+      <blockquote class="ch__q" data-rv style="--d:290ms">要求一般干部和群众做到的，领导干部要首先做到。</blockquote>
+
+      <div class="docs" data-rv style="--d:350ms">
+        <div class="doc open">
+          <button class="doc__h" aria-expanded="true"><em>01</em><span class="doc__t">《关于改进领导作风的几项规定》</span><span class="doc__m">正发〔1983〕42号</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>1983 年 12 月 6 日印发，六条、一千二百余字，通称“六项规定”。</p>
+            <ol>
+              <li><b>总揽全局，抓大事</b>主要精力放在路线方针政策的执行上，支持政府与各职能部门大胆行使职权。</li>
+              <li><b>反对官衙作风，注重实效</b>建立联系户、联系点；每年三分之一以上时间在基层；批复一般不超过三天，紧急事项当天办结。</li>
+              <li><b>搞好“一班人”团结</b>新老互相尊重，赤诚相见，不搞厚薄亲疏，不背后议论人。</li>
+              <li><b>以身作则，不搞不正之风</b>不以权谋私、不搞特殊化；对各种不正之风敢问、敢顶、敢管、敢于碰硬。</li>
+              <li><b>加强学习</b>学理论、学中央文件、学经济与技术，请有专长的人授课，“挤时间”系统学。</li>
+              <li><b>树立雄心壮志</b>在全国同行业中找先进典型，比学赶超。</li>
+            </ol>
+            <a class="doc__link" href="https://hbxw.hebnews.cn/news/116189.html" target="_blank" rel="noopener">河北新闻网 · 相关记述<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>02</em><span class="doc__t">《一九八四年工作大纲》党建部分</span><span class="doc__m">正发〔1984〕1号</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>1984 年 3 月 9 日印发，第二部分专门部署党的建设——从“立规矩”走向“整组织”。</p>
+            <ol>
+              <li><b>健全党的生活</b></li>
+              <li><b>学好整党文件</b>边学边整边改，重点解决政治迟钝、思想保守、以权谋私、官僚主义、精神不振纪律涣散。</li>
+              <li><b>清理“三种人”</b>按中央政策规定，纯洁党的组织。</li>
+              <li><b>整顿基层组织</b>重点整顿瘫痪半瘫痪、问题较多的班子，按“四化”要求建设领导班子。</li>
+              <li><b>加强第三梯队</b>选好乡和科局后备干部，建立后备制度。</li>
+              <li><b>搞好机构改革</b></li>
+            </ol>
+            <a class="doc__link" href="https://news.cctv.com/2026/07/28/ARTIPdddBpr2G45oxtHoRliB260720.shtml" target="_blank" rel="noopener">央视网 · 相关报道<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>03</em><span class="doc__t">《建设适应四化需要的党的基层组织》</span><span class="doc__m">1983.08.16 讲话</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>收入《知之深 爱之切》。五个判断，把“基层党建”从口号变成职责。</p>
+            <ol>
+              <li><b>定位</b>基层组织是党联系人民群众的桥梁和纽带，是基层的战斗堡垒。</li>
+              <li><b>主责</b>党委应以主要精力抓党的建设；党委书记不抓党的建设就是失职。</li>
+              <li><b>问题</b>不敢正视问题、解决问题，搞好党组织的整顿和建设就是一句空话。</li>
+              <li><b>班子</b>解决政治路线立场、全心全意为人民服务、组织生活不健全、班子涣散软弱四个问题。</li>
+              <li><b>党员</b>抓三项教育，坚持“三会一课”，发展党员“成熟一个发展一个”。</li>
+            </ol>
+            <a class="doc__link" href="https://cpc.people.com.cn/n/2014/0102/c64094-24000956-6.html" target="_blank" rel="noopener">人民网 · 中国共产党新闻网<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <figure class="plate plate--photo" data-rv style="--d:100ms">
+      <img src="assets/img/crowd.jpg" alt="习近平在正定工作期间，与群众围坐交谈、听取意见。" loading="lazy">
+      <figcaption class="plate__cap"><b>壹</b>座谈 · 听意见 <span>新华社影像</span></figcaption>
+    </figure>
+  </article>
+
+  <!-- 宁德 -->
+  <article class="ch ch--flip wrap" id="c2">
+    <div class="ch__txt">
+      <div class="ch__meta" data-rv><b>贰</b><span>宁德</span><span class="ch__yr">1988</span></div>
+      <h2 class="ch__h" data-rv style="--d:60ms"><span class="ln"><i>固本强基</i></span></h2>
+      <p class="ch__sub" data-rv style="--d:150ms">围绕“摆脱贫困”强化党的领导</p>
+      <p class="ch__lede" data-rv style="--d:220ms">“老、少、边、岛、贫”叠加。最缺的不是钱，是有人把群众重新组织起来。</p>
+      <blockquote class="ch__q" data-rv style="--d:290ms">千条万条，最根本的只有两条：一是党的领导，二是人民群众的力量。</blockquote>
+
+      <div class="docs" data-rv style="--d:350ms">
+        <div class="doc open">
+          <button class="doc__h" aria-expanded="true"><em>01</em><span class="doc__t">《关于建立地县党政领导干部党建工作联系点制度的通知》</span><span class="doc__m">1989.06</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>1989 年 6 月，宁德地委下发。领导干部深入基层、联系群众，从此不再是个人作风，而是一套可复制、可检查的制度安排。</p>
+            <ol>
+              <li><b>定人</b>地、县党政领导干部各自确定党建联系点，挂钩到乡、到村。</li>
+              <li><b>定责</b>联系点上的班子建设、党员作用、群众反映的突出问题，由联系领导负责推动解决。</li>
+              <li><b>定时</b>下基层进工作日程，靠制度排期，不靠“有空就去”。</li>
+              <li><b>定果</b>联系点情况纳入工作检查——做法能考核，才能被复制。</li>
+            </ol>
+            <a class="doc__link" href="http://politics.people.com.cn/n/2014/0228/c1001-24489705.html" target="_blank" rel="noopener">人民网 · 相关报道<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>02</em><span class="doc__t">“四下基层”工作制度</span><span class="doc__m">1989.01 起</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>1989 年 1 月，在已有做法上再提三项活动：地县领导到基层现场办公、建立群众接待日制度、领导干部同基层单位挂钩联系。此后完整表述为四句话，从局部做法上升为全区性工作规范。</p>
+            <ol>
+              <li><b>宣传党的路线、方针、政策下基层</b>把政策讲到群众听得懂、用得上。</li>
+              <li><b>调查研究下基层</b>先看事实，再作判断，不靠层层上报的材料。</li>
+              <li><b>信访接待下基层</b>把群众的问题解决在它发生的地方。</li>
+              <li><b>现场办公下基层</b>当场定责、当场办结，不让文件旅行。</li>
+            </ol>
+            <a class="doc__link" href="http://qstheory.cn/laigao/ycjx/2023-11/23/c_1129989322.htm" target="_blank" rel="noopener">求是网 · “四下基层”是密切联系群众的重大创举<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>03</em><span class="doc__t">整顿农村基层党支部</span><span class="doc__m">429 个 · 1989</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>1989 年，宁德地委部署整顿、调整 429 个农村基层党支部，评出基本不合格和不合格党员 3650 名，占党员总数的 4.4%。</p>
+            <ol>
+              <li><b>外联群众</b>用“四下基层”把干部送到群众面前。</li>
+              <li><b>内严组织</b>整顿支部、处置不合格党员，把“从严治党”落到最末端的组织单元。</li>
+              <li><b>双向结构</b>一外一内：群众路线与组织从严互为支撑，缺一边都不成立。</li>
+            </ol>
+            <a class="doc__link" href="http://m.news.cctv.com/2017/03/19/ARTI49dCuTGjMFLV7LCzj3QW170319.shtml" target="_blank" rel="noopener">央视网 · 追寻习近平总书记的初心·宁德篇<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>04</em><span class="doc__t">清房工作</span><span class="doc__m">1988—1990</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>1988 年到宁德后，把干部违规私建住房、多占公房问题作为惩治腐败的突破口——先动群众看得见的那件事。</p>
+            <ol>
+              <li><b>选突破口</b>不泛泛讲反腐，从“房子”这类身边的具体问题入手。</li>
+              <li><b>划政策界限</b>先分清违规与合规，再逐户清理，避免运动式推进。</li>
+              <li><b>结果</b>至 1990 年 9 月，全区清退公房 1917 户，相当于 50 套为一幢的宿舍楼 40 座，清退工作走在全省前列。</li>
+            </ol>
+            <a class="doc__link" href="http://www.china.com.cn/news/2017-07/14/content_41213507.htm" target="_blank" rel="noopener">中国网 · 习近平总书记在福建的探索与实践·党建篇<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>05</em><span class="doc__t">《摆脱贫困》</span><span class="doc__m">29 篇 · 12 万字</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>不是行政公文，却是这一时期党建战略思想最集中、最系统的文本载体。《提倡“经济大合唱”》讲得最直白：经济工作“上下左右要形成一个整体”，“经济大合唱，得有总指挥”。</p>
+            <ol>
+              <li><b>主线</b>经济建设是最大的政治，党建要围绕它、服务于它。</li>
+              <li><b>方法</b>“弱鸟先飞”“滴水穿石”——先摆脱意识与思路的贫困。</li>
+              <li><b>组织</b>分散的力量要拧成一个整体，就得有人当“总指挥”。</li>
+            </ol>
+            <a class="doc__link" href="https://fuwu.12371.cn/2014/10/27/ARTI1414381442463977.shtml" target="_blank" rel="noopener">共产党员网 · 《摆脱贫困》全文<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+            <a class="doc__link" href="https://www.bilibili.com/video/BV12y4y1w7WM/" target="_blank" rel="noopener" style="margin-left:14px">B 站 · 相关视频<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="plate-stack" data-rv style="--d:100ms">
+      <figure class="plate plate--photo">
+        <img src="assets/img/nd-elder.jpg" alt="宁德时期，习近平在乡村与群众交谈，身旁是一位白发老人" loading="lazy" decoding="async">
+        <figcaption class="plate__cap"><b>贰</b>访贫问苦 · 与群众交谈 <span>新华社影像</span></figcaption>
+      </figure>
+      <figure class="plate plate--photo">
+        <img src="assets/img/nd-visit.jpg" alt="宁德时期，习近平走进农家了解生产生活情况" loading="lazy" decoding="async" style="aspect-ratio:21/9">
+        <figcaption class="plate__cap"><b>贰</b>走村入户 · 看锅里碗里 <span>新华社影像</span></figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 浙江 -->
+  <article class="ch wrap" id="c3">
+    <div class="ch__txt">
+      <div class="ch__meta" data-rv><b>叁</b><span>浙江</span><span class="ch__yr">2002</span></div>
+      <h2 class="ch__h" data-rv style="--d:60ms"><span class="ln"><i>制度治党</i></span></h2>
+      <p class="ch__sub" data-rv style="--d:150ms">系统化推进，制度治党初具轮廓</p>
+      <p class="ch__lede" data-rv style="--d:220ms">市场经济先发，政策容易打折、权力容易失范。他的办法不是反复喊话，而是一层层立规。</p>
+      <blockquote class="ch__q" data-rv style="--d:290ms">不能搞“上有政策、下有对策”。</blockquote>
+
+      <div class="docs" data-rv style="--d:350ms">
+        <div class="doc open">
+          <button class="doc__h" aria-expanded="true"><em>01</em><span class="doc__t">《中共浙江省委议事规则》</span><span class="doc__m">2003 年初</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>习近平同志主持制定。对省委全委会、常委会、书记办公会、省委专题会的议事范围、议事方式、议事要求逐项作出规范。</p>
+            <ol>
+              <li><b>定范围</b>哪些事上哪个会，先划清楚，不靠惯例。</li>
+              <li><b>定方式</b>怎么议、怎么表决、怎么记录，程序写进规则。</li>
+              <li><b>定要求</b>议题准备、材料时限、出席人数，都有硬约束。</li>
+            </ol>
+            <p style="margin-top:14px">把“集体领导”这一民主集中制的关键环节，转化为可执行的程序规则——浙江制度治党的“第一块砖”。</p>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>02</em><span class="doc__t">《浙江省反腐倡廉防范体系实施意见（试行）》</span><span class="doc__m">2003.07</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>省委制定出台。核心是“五十二条、六大机制”，起草历时 10 个多月、十易其稿。</p>
+            <ol>
+              <li><b>思想教育机制</b>先把“不想”这一头做起来。</li>
+              <li><b>权力制约机制</b>让权力在结构上就难以越界。</li>
+              <li><b>监督管理机制</b>把日常监督做成常态动作。</li>
+              <li><b>法纪约束机制</b>违纪违法有明确后果。</li>
+              <li><b>廉政激励机制</b>让守规矩的人不吃亏。</li>
+              <li><b>测评预警机制</b>用指标提前发现风险点。</li>
+            </ol>
+            <p style="margin-top:14px">浙江在全国较早以省委文件形式系统构建防范体系，标志反腐从“权力反腐”（个案查处）转向“制度反腐”（源头防范）。</p>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>03</em><span class="doc__t">《关于进一步加强和改进机关党的建设的意见》</span><span class="doc__m">2003.12</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>明确机关党建的定位与任务，提出机关工委要管好党员、管好干部、管好首脑机关。</p>
+            <ol>
+              <li><b>定位</b>党政机关的特殊地位和作用，决定了机关党建应该走在前头、做出表率。</li>
+              <li><b>任务</b>管党员、管干部、管首脑机关——“三个管好”把职责压实到具体对象。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>04</em><span class="doc__t">《关于机关效能建设的决定》及责任追究办法</span><span class="doc__m">2004.02 / 2004.12</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>2004 年 2 月部署机关效能建设；12 月 10 日公布《影响机关效能行为责任追究办法（试行）》。</p>
+            <ol>
+              <li><b>列清单</b>办法列举 30 种影响机关效能的行为，涵盖工作纪律、服务态度、办事效率、执法行为。</li>
+              <li><b>给后果</b>批评、告诫、扣发岗位考核奖、调离岗位，直至辞退。</li>
+              <li><b>可考核</b>把“作风”变成“效能指标”——作风第一次能被量化追责。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>05</em><span class="doc__t">机关效能建设“四条禁令”</span><span class="doc__m">2004.08.19</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>省纪委、省监察厅《关于认真贯彻执行浙江省机关效能建设“四条禁令”的通知》。</p>
+            <ol>
+              <li><b>一</b>严禁擅离岗位、擅离职守。</li>
+              <li><b>二</b>严禁网上聊天、炒股、玩电脑游戏。</li>
+              <li><b>三</b>严禁中餐饮酒（接待省外客人不在此列）。</li>
+              <li><b>四</b>严禁在办事、办证中接受当事人宴请和礼品、礼金。</li>
+            </ol>
+            <p style="margin-top:14px">典型的“小切口解决大问题”：以“一顿午饭”这类最具体、最可核查的行为为切入点，把抽象的作风建设变成人人可对照的行为清单。</p>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>06</em><span class="doc__t">《关于进一步加强领导班子思想政治建设的意见》</span><span class="doc__m">2004.08</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>对领导班子思想政治建设作出具体部署，把“政治建设”从原则要求变成制度安排。</p>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>07</em><span class="doc__t">《关于切实加强党的执政能力建设的意见》</span><span class="doc__m">2004.10</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>省委十一届七次全会审议通过。一套总体思路、八个方面全覆盖——“巩固八个基础、增强八种本领”，被浙江党建工作者称为“党建工作的‘八八战略’”。</p>
+            <ol>
+              <li><b>思想基础</b>用发展着的马克思主义指导新实践。</li>
+              <li><b>经济基础</b>驾驭社会主义市场经济。</li>
+              <li><b>政治基础</b>发展社会主义民主政治。</li>
+              <li><b>文化基础</b>建设社会主义先进文化。</li>
+              <li><b>社会基础</b>构建社会主义和谐社会。</li>
+              <li><b>体制基础</b>地方党委总揽全局、协调各方。</li>
+              <li><b>组织基础</b>自身素质与团结带领群众干事业。</li>
+              <li><b>群众基础</b>拒腐防变、抵御风险。</li>
+            </ol>
+            <p style="margin-top:14px">本专题最重要的一份文献：八个方面成体系，不是一条一条补，而是一整套建。</p>
+            <div class="doc__links">
+              <a class="doc__link" href="https://jwjcj.ouhai.gov.cn/art/2008/5/22/art_1256110_3603524.html" target="_blank" rel="noopener">瓯海廉政网 · 相关论述<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+              <a class="doc__link" href="http://www.71.cn/2013/0130/702902.shtml" target="_blank" rel="noopener">宣讲家网 · 相关文章<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+              <a class="doc__link" href="https://office.zisu.edu.cn/content.jsp?urltype=news.NewsContentUrl&wbtreeid=1148&wbnewsid=1762" target="_blank" rel="noopener">浙江外国语学院 · 学习材料<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="plate-stack" data-rv style="--d:100ms">
+      <figure class="plate plate--photo">
+        <img src="assets/img/zj-rain.jpg" alt="浙江时期，习近平冒雨在基层调研，与当地干部交谈" loading="lazy" decoding="async">
+        <figcaption class="plate__cap"><b>叁</b>雨中调研 · 问县情 <span>新华社影像</span></figcaption>
+      </figure>
+      <figure class="plate plate--photo">
+        <img src="assets/img/zj-site.jpg" alt="浙江时期，习近平在户外对照图纸现场研究规划" loading="lazy" decoding="async" style="aspect-ratio:21/9">
+        <figcaption class="plate__cap"><b>叁</b>现场看图纸 · 跑深感情 <span>新华社影像</span></figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 上海 -->
+  <article class="ch ch--flip wrap" id="c4">
+    <div class="ch__txt">
+      <div class="ch__meta" data-rv><b>肆</b><span>上海</span><span class="ch__yr">2007</span></div>
+      <h2 class="ch__h" data-rv style="--d:60ms"><span class="ln"><i>不辱门楣</i></span></h2>
+      <p class="ch__sub" data-rv style="--d:150ms">特大城市党建与“排头兵”意识</p>
+      <p class="ch__lede" data-rv style="--d:220ms">七个月。一个判断：党的诞生地，党建没有“一般水平”这一说。</p>
+      <blockquote class="ch__q" data-rv style="--d:290ms">从精神象征的意义来讲，卢湾也应该成为党建的先进所在地——这样才能“不辱门楣”。</blockquote>
+
+      <div class="docs" data-rv style="--d:350ms">
+        <div class="doc open">
+          <button class="doc__h" aria-expanded="true"><em>01</em><span class="doc__t">市第九次党代会报告</span><span class="doc__m">2007.05</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>把党的政治建设单列一部分——在一份管五年的报告里，这等于给“讲政治”留了独立的位置。</p>
+            <ol>
+              <li><b>单列</b>政治建设不再附在经济、文化之后，而是自成一块。</li>
+              <li><b>定调</b>特大型城市的党建，先要把政治方向讲清楚。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>02</em><span class="doc__t">《中共上海市委常委会议事决策规则》</span><span class="doc__m">2007</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>把市委的议事与决策程序写死，其中一处特别值得注意：新增法院党组、检察院党组须向市委汇报工作。</p>
+            <ol>
+              <li><b>程序</b>议事范围、决策程序、责任追究一条条明确。</li>
+              <li><b>覆盖</b>法院、检察院党组纳入向市委汇报的范围——党的领导贯通到政法系统。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>03</em><span class="doc__t">《加强自身建设的若干意见》</span><span class="doc__m">2007</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>市委班子给自己立规矩，提出“八个坚持”，涵盖思想理论建设、民主集中制、党管干部、群众路线等方面。</p>
+            <ol>
+              <li><b>先管自己</b>“自身建设”四个字，意味着约束从常委会开始。</li>
+              <li><b>成体系</b>八条不是零散要求，而是一套班子运行的规范。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>04</em><span class="doc__t">解决干部“一干两制”问题</span><span class="doc__m">2007</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>干部不能既拿企业高薪、又保留公务员身份——两头占，本身就是最大的不公。</p>
+            <ol>
+              <li><b>切利益</b>从最容易被议论的身份重叠处下手。</li>
+              <li><b>立规矩</b>选择哪一头，必须明确，不能含混过关。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>05</em><span class="doc__t">建立统一土地交易平台</span><span class="doc__m">2007</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>土地是当时腐败最集中的领域。办法不是一次次查案，而是把交易集中到一个平台上：统一交易、统一监管。</p>
+            <ol>
+              <li><b>堵漏洞</b>分散交易、私下议价的空间被压缩。</li>
+              <li><b>可监管</b>过程留痕，监督才有抓手。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>06</em><span class="doc__t">“三访三服务”工作机制</span><span class="doc__m">2007</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>下访、走访、接访，加上协调服务、窗口服务、自助互助——把联系群众拆成可执行的动作。</p>
+            <ol>
+              <li><b>三访</b>下访、走访、接访：干部主动出去，而不是等群众上门。</li>
+              <li><b>三服务</b>协调服务、窗口服务、自助互助：服务分层，各有接口。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>07</em><span class="doc__t">“贪欲之害”系列警示教育片</span><span class="doc__m">2007</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>干部教育从“正面教育为主”，转向同时增加警示教育——用身边的反面案例说话。</p>
+            <ol>
+              <li><b>换方法</b>不只讲应该怎么做，也讲做错会怎样。</li>
+              <li><b>用案例</b>警示片比文件更直接，也更容易被记住。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>08</em><span class="doc__t">卢湾区调研：“不辱门楣”</span><span class="doc__m">2007.08.28</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>卢湾区是中共一大会址所在地。他说：从精神象征的意义来讲，卢湾也应该成为党建的先进所在地，这样才能“不辱门楣”。</p>
+            <ol>
+              <li><b>定位</b>“要坚持党要管党、从严治党，不断加强党的建设。”</li>
+              <li><b>抓手</b>抓好社区党建和“两新”组织党建，建立健全长效机制。</li>
+              <li><b>象征</b>诞生地的党建，标准只能更高——这是“特殊重要性”的由来。</li>
+            </ol>
+            <div class="doc__links">
+              <a class="doc__link" href="https://shanghai.xinmin.cn/xmsz/2021/09/26/32033692.html" target="_blank" rel="noopener">新民网 · 《习近平在上海》采访实录反响<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+            </div>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>09</em><span class="doc__t">“三个区别开来”</span><span class="doc__m">为干部松绑鼓劲</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>社保案之后，上海干部普遍“不敢担当、不敢创新”。这把尺子把三件事分开，等于当众给干部松绑。</p>
+            <ol>
+              <li><b>一</b>市委集体作出的正确决策，与个人的严重违纪行为，区别开来。</li>
+              <li><b>二</b>执行错误决定的行为，与工作中的态度，区别开来。</li>
+              <li><b>三</b>个人的观点，与个人的严重违纪行为，区别开来。</li>
+            </ol>
+            <p style="margin-top:14px">三条一划，责任回到该负责的人身上，其他人可以继续干事——这是七个月里最有分量的一次“解扣”。</p>
+            <div class="doc__links">
+              <a class="doc__link" href="https://m.huanqiu.com/article/9CaKrnKfUVN" target="_blank" rel="noopener">环球网 · 习近平的改革足迹——上海<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="plate-stack" data-rv style="--d:100ms">
+      <figure class="plate plate--photo">
+        <img src="assets/img/sh-view.jpg" alt="上海时期，习近平在高层建筑内眺望黄浦江两岸" loading="lazy" decoding="async">
+        <figcaption class="plate__cap"><b>肆</b>俯瞰浦江 · 谋全局 <span>资料图片</span></figcaption>
+      </figure>
+      <figure class="plate plate--photo">
+        <img src="assets/img/sh-kids.jpg" alt="上海时期，习近平在学校与孩子们在一起" loading="lazy" decoding="async" style="aspect-ratio:21/9;object-position:50% 42%">
+        <figcaption class="plate__cap"><b>肆</b>与孩子们在一起 <span>资料图片</span></figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- 新时代 -->
+  <article class="ch wrap" id="c5">
+    <div class="ch__txt">
+      <div class="ch__meta" data-rv><b>伍</b><span>新时代</span><span class="ch__yr">2012</span></div>
+      <h2 class="ch__h" data-rv style="--d:60ms"><span class="ln"><i>自我革命</i></span></h2>
+      <p class="ch__sub" data-rv style="--d:150ms">升华为系统思想</p>
+      <p class="ch__lede" data-rv style="--d:220ms">从管党治党“宽松软”到全面从严，散落在各地的探索，被收拢成一套完整理论。</p>
+      <blockquote class="ch__q" data-rv style="--d:290ms">找到了跳出治乱兴衰历史周期率的第二个答案——自我革命。</blockquote>
+
+      <div class="docs" data-rv style="--d:350ms">
+        <div class="doc open">
+          <button class="doc__h" aria-expanded="true"><em>01</em><span class="doc__t">以中央八项规定破题作风建设</span><span class="doc__m">2012.12.04</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>十八届中央政治局会议审议通过“中央八项规定”。从“舌尖上的浪费”“车轮上的腐败”“会所中的歪风”这些具体小事抓起，靶向纠治形式主义、官僚主义、享乐主义和奢靡之风。</p>
+            <ol>
+              <li><b>小切口</b>先管住一顿饭、一辆车、一间会所——标准具体到能对照。</li>
+              <li><b>质量互变</b>一件件小事累积，最终撬动的是全面从严治党的“大变局”。</li>
+              <li><b>结果</b>党风政风由此扭转，作风从“一阵风”变成长期约束。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>02</em><span class="doc__t">“不敢腐、不能腐、不想腐”一体推进</span><span class="doc__m">系统思维</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>面对反腐败斗争的严峻形势，坚持无禁区、全覆盖、零容忍，“打虎”“拍蝇”“猎狐”多管齐下；进而用系统思维把战略深化为“三不腐”一体推进。</p>
+            <ol>
+              <li><b>不敢腐（治标）</b>以雷霆震慑形成“伸手必被捉”的确定预期。</li>
+              <li><b>不能腐（治本）</b>扎紧党内法规制度笼子，深化国家监察体制改革。</li>
+              <li><b>不想腐（固根）</b>理想信念教育与廉洁文化，解决思想源头。</li>
+              <li><b>一体</b>三者同时发力、同向发力、综合发力——单打一都不成立。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>03</em><span class="doc__t">纳入“四个全面”，以政治建设统领全局</span><span class="doc__m">2014.12 / 十九大</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>2014 年 12 月，“全面从严治党”纳入“四个全面”战略布局——管党治党从一般日常党务，上升为统揽全局的根本政治保障。</p>
+            <ol>
+              <li><b>定位之变</b>不再是“一项工作”，而是战略布局的组成部分。</li>
+              <li><b>政治建设摆在首位</b>党的十九大首次把党的政治建设摆在首位：坚持“两个确立”、做到“两个维护”，严明政治纪律和政治规矩。</li>
+              <li><b>清除隐患</b>清除“七个有之”的政治隐患。</li>
+              <li><b>统领</b>以政治建设统领思想、组织、作风、纪律和制度建设。</li>
+            </ol>
+          </div></div>
+        </div>
+
+        <div class="doc">
+          <button class="doc__h" aria-expanded="false"><em>04</em><span class="doc__t">跳出历史周期率的第二个答案</span><span class="doc__m">自我革命</span><i class="doc__i"></i></button>
+          <div class="doc__w"><div class="doc__b">
+            <p>1945 年“延安窑洞对”，毛泽东同志给出第一个答案——让人民来监督政府。站在百年大党的历史纵深、面对“六个如何始终”的大党独有难题，习近平给出了第二个答案：党的自我革命。</p>
+            <ol>
+              <li><b>底线思维</b>先假定“可能变质”，再设计如何不变质。</li>
+              <li><b>九个以</b>二十届中央纪委三次全会上，系统提出推进自我革命“九个以”的实践要求。</li>
+              <li><b>定型</b>2026 年全国党建工作座谈会明确部署学习贯彻“习近平党建思想”，标志这一以自我革命为内核的思想体系完全成熟。</li>
+            </ol>
+            <a class="doc__link" href="https://www.12371.cn/" target="_blank" rel="noopener">共产党员网 · 学习专题<svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 9L9 1M9 1H3.4M9 1v5.6"/></svg></a>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="plate-stack" data-rv style="--d:100ms">
+      <figure class="plate plate--photo">
+        <img src="assets/img/xs-podium.jpg" alt="习近平在中央会议上讲话" loading="lazy" decoding="async">
+        <figcaption class="plate__cap"><b>伍</b>会场 · 定型 <span>资料图片</span></figcaption>
+      </figure>
+      <figure class="plate plate--photo">
+        <img src="assets/img/xs-street.jpg" alt="习近平在街头向群众挥手" loading="lazy" decoding="async" style="aspect-ratio:21/9;object-position:50% 45%">
+        <figcaption class="plate__cap"><b>伍</b>街头 · 面对面 <span>资料图片</span></figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <div class="wrap">
+    <div class="phases" data-rv>
+      <div class="phases__h"><em>2012 — 2026</em><span>新时代党建的四个阶段</span></div>
+      <ol class="phases__l">
+        <li><b>2012—2014</b><i>作风破题</i><span>八项规定 · 群众路线教育实践活动 · 活动总结大会</span></li>
+        <li><b>2015—2019</b><i>制度固化</i><span>《准则》《条例》 · 十九大 · 全国组织工作会议</span></li>
+        <li><b>2020—2024</b><i>体系集成</i><span>建党百年 · 六中全会 · 二十大 · 党纪学习教育</span></li>
+        <li><b>2025—2026</b><i>治权与跃升</i><span>八项规定学习教育 · 纪委全会 · 党建工作座谈会</span></li>
+      </ol>
+    </div>
+
+    <div class="quotes" data-rv style="--d:120ms">
+      <div class="quotes__h" style="grid-column:1/-1">原文 · 八个时间点</div>
+      <p><b>2013.01.22</b><span>八项规定是一个切入口和动员令。</span></p>
+      <p><b>2013.01.22</b><span>把权力关进制度的笼子里。</span></p>
+      <p><b>2014.10.08</b><span>作风问题，核心是党和人民群众的关系问题。</span></p>
+      <p><b>2016.10.27</b><span>党要管党必须从党内政治生活管起，从严治党必须从党内政治生活严起。</span></p>
+      <p><b>2017.10.18</b><span>党的政治建设是党的根本性建设，决定党的建设方向和效果。</span></p>
+      <p><b>2021.11.11</b><span>自我革命是我们党跳出治乱兴衰历史周期率的第二个答案。</span></p>
+      <p><b>2022.10.16</b><span>全面从严治党永远在路上，党的自我革命永远在路上。</span></p>
+      <p><b>2026.10.29</b><span>增强党性是全面从严治党的根本性任务。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ archive ══════════ -->
+<section class="sec wrap" id="archive">
+  <div class="sec__head">
+    <h2 data-rv>影像<em>档案</em></h2>
+    <p data-rv style="--d:120ms">五个时期留下的底片。正文之外还有这些：一条修了多年的路，一场谈到深夜的会，一次展陈前的驻足，几户人家门口的脚步。</p>
+  </div>
+
+  <div class="arch" data-rv style="--d:160ms">
+    <figure class="arch__wide">
+      <img src="assets/img/nd-road-clean.jpg" alt="1989 年，宁德下党第一条通乡公路开工建设，干部群众在山路上施工" loading="lazy" decoding="async">
+      <figcaption><b>贰</b>下党通乡公路开工 · 1989 <span>新华社影像</span></figcaption>
+    </figure>
+    <figure class="arch__half">
+      <img src="assets/img/nd-night.jpg" alt="宁德时期，习近平夜间与基层干部群众座谈" loading="lazy" decoding="async">
+      <figcaption><b>贰</b>夜谈 · 把话说到灯下 <span>新华社影像</span></figcaption>
+    </figure>
+    <figure class="arch__half">
+      <img src="assets/img/xs-visit.jpg" alt="新时代，习近平在乡村走访群众" loading="lazy" decoding="async">
+      <figcaption><b>伍</b>走访 · 新时代 <span>新华社影像</span></figcaption>
+    </figure>
+    <figure class="arch__half">
+      <img src="assets/img/sh-mural.jpg" alt="在上海参观展览，驻足于焦裕禄事迹展陈前" loading="lazy" decoding="async">
+      <figcaption><b>肆</b>参观 · 焦裕禄事迹展 <span>资料图片</span></figcaption>
+    </figure>
+    <figure class="arch__half">
+      <img src="assets/img/sh-ftz.jpg" alt="在上海考察中国（上海）自由贸易试验区建设" loading="lazy" decoding="async">
+      <figcaption><b>肆</b>自贸区 · 制度创新的试验田 <span>资料图片</span></figcaption>
+    </figure>
+    <figure class="arch__wide arch__pano">
+      <img src="assets/img/theory-panel.jpg" alt="展览中的“四大考验”展板" loading="lazy" decoding="async">
+      <figcaption><b>伍</b>展陈 · 四大考验 <span>资料图片</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══════════ dimensions ══════════ -->
+<section class="sec wrap" id="dims">
+  <div class="sec__head">
+    <h2 data-rv>五个阶段背后，<br>是<em>七种科学思想方法</em></h2>
+    <p data-rv style="--d:120ms">第一条就是战略思维：把党建放到长期执政、强国复兴、百年变局中去谋划。其余六条，都是它的同伴。</p>
+  </div>
+  <div class="dims dims--7" data-rv style="--d:160ms">
+    <article class="dim">
+      <span class="dim__bar"></span>
+      <span class="dim__n">01</span>
+      <div><h3>战略思维</h3><p>把党建放到长期执政、强国复兴、百年变局中谋划，而不是当成一项部门工作。</p></div>
+    </article>
+    <article class="dim">
+      <span class="dim__bar"></span>
+      <span class="dim__n">02</span>
+      <div><h3>历史思维</h3><p>从百年奋斗史和历史周期率中找答案——所以才有“第二个答案”。</p></div>
+    </article>
+    <article class="dim">
+      <span class="dim__bar"></span>
+      <span class="dim__n">03</span>
+      <div><h3>辩证思维</h3><p>严管与厚爱、改革与从严、自我革命与社会革命，都是相统一的两面。</p></div>
+    </article>
+    <article class="dim">
+      <span class="dim__bar"></span>
+      <span class="dim__n">04</span>
+      <div><h3>系统思维</h3><p>以“四个全”“十四个坚持”把各方面串成体系，而不是一条一条补。</p></div>
+    </article>
+    <article class="dim">
+      <span class="dim__bar"></span>
+      <span class="dim__n">05</span>
+      <div><h3>创新思维</h3><p>用“九个以”“自我革命重在治权”回答前人没遇到过的新问题。</p></div>
+    </article>
+    <article class="dim">
+      <span class="dim__bar"></span>
+      <span class="dim__n">06</span>
+      <div><h3>法治思维</h3><p>以党章为根本、以制度为准绳，把主张变成可执行的规矩。</p></div>
+    </article>
+    <article class="dim">
+      <span class="dim__bar"></span>
+      <span class="dim__n">07</span>
+      <div><h3>底线思维</h3><p>正视“四大考验”“四种危险”，把最坏的情况想在前面——所以“永远在路上”不是修辞。</p></div>
+    </article>
+  </div>
+
+  <div class="threads" data-rv style="--d:220ms">
+    <div class="threads__h">贯穿七个阶段的五条主线</div>
+    <ol class="threads__l">
+      <li><b>问题导向</b>作风→四风→纪律→政绩观，问题在变，重点跟着变。</li>
+      <li><b>人民立场</b>“江山就是人民”，作风的核心始终是党群关系。</li>
+      <li><b>以上率下</b>中央政治局带头，抓“关键少数”和“一把手”。</li>
+      <li><b>长期主义</b>常态化长效化，不搞“一阵风”。</li>
+      <li><b>自我革命</b>2021 年“第二个答案”→2024 年“九个以”→2026 年“重在治权”。</li>
+    </ol>
+  </div>
+
+  <div class="gloss" data-rv style="--d:280ms">
+    <div class="gloss__h">四组关键词 · 这套方法自己的词汇</div>
+    <div class="gloss__l">
+      <div><b>四个全</b><p>内容上全涵盖、对象上全覆盖、责任上全链条、制度上全贯通。</p></div>
+      <div><b>九个以</b><p>根本保证、根本目的、根本遵循、战略目标、主攻方向、有效途径、重要着力点、重要抓手、强大动力。</p></div>
+      <div><b>十四个坚持</b><p>从党的全面领导、党中央集中统一领导，到作风常态化、严明纪律、“三不腐”——十四项要求串成一个整体。</p></div>
+      <div><b>三个更加</b><p>更加坚决有力地贯彻中央决策部署，更加科学有效地把权力关进制度笼子，更加清醒坚定地推进反腐败斗争。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 文字轨迹（交互页，无文案） ══════════ -->
+<section class="sec--trace" id="trace" aria-label="文字轨迹交互">
+  <div class="dstage" id="cursorstage">
+    <div class="dstage__layer" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ══════════ 十四个坚持（掉落页，无标题） ══════════ -->
+<section class="sec--fall" id="fourteen" aria-label="十四个坚持">
+  <div class="fall" id="fallStage">
+    <div class="fall__text" id="fallText">
+      <span class="fall__piece"><i>01</i>坚持党的领导是中国特色社会主义最本质的特征</span>
+      <span class="fall__piece"><i>02</i>坚持党中央集中统一领导</span>
+      <span class="fall__piece"><i>03</i>坚持全面从严治党</span>
+      <span class="fall__piece"><i>04</i>坚持不忘初心、牢记使命</span>
+      <span class="fall__piece"><i>05</i>坚持以党的政治建设为统领</span>
+      <span class="fall__piece"><i>06</i>坚持用党的创新理论凝心铸魂</span>
+      <span class="fall__piece"><i>07</i>坚持锤炼坚强党性</span>
+      <span class="fall__piece"><i>08</i>坚持健全上下贯通、执行有力的组织体系</span>
+      <span class="fall__piece"><i>09</i>坚持建设堪当民族复兴重任的高素质干部队伍</span>
+      <span class="fall__piece"><i>10</i>坚持推进作风建设常态化长效化</span>
+      <span class="fall__piece"><i>11</i>坚持用严明的纪律管全党治全党</span>
+      <span class="fall__piece"><i>12</i>坚持一体推进不敢腐不能腐不想腐</span>
+      <span class="fall__piece"><i>13</i>坚持制度治党、依规治党</span>
+      <span class="fall__piece"><i>14</i>坚持落实管党治党政治责任</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ logic ══════════ -->
+<section class="sec wrap" id="logic">
+  <div class="sec__head">
+    <h2 data-rv>四个台阶，<br><em>一次上升</em></h2>
+    <p data-rv style="--d:120ms">治理范围在扩大，治理难度在提升，认识也在上升——这是同一条线索的四个高度。</p>
+  </div>
+  <div class="stair" id="stair" data-rv style="--d:160ms">
+    <div class="step"><em>01</em><b>具体举措</b><span>正定 · 宁德<br>对准一个具体问题，先把它解决掉</span></div>
+    <div class="step"><em>02</em><b>制度体系</b><span>浙江 · 上海<br>把有效做法固定下来，形成可复制的规矩</span></div>
+    <div class="step"><em>03</em><b>系统思想</b><span>党的十八大以来<br>把分散探索整合为完整理论</span></div>
+    <div class="step"><em>04</em><b>自我革命</b><span>新时代的深化<br>从“管住”走向“自我纠错”</span></div>
+  </div>
+</section>
+
+<!-- ══════════ close ══════════ -->
+<section class="close" id="close">
+  <figure class="close__plate">
+    <img src="assets/img/emblem.jpg" alt="建筑上的国徽" loading="lazy" decoding="async">
+    <figcaption><span>国徽 · 建筑细节</span><span>资料图片</span></figcaption>
+  </figure>
+  <div class="close__inner wrap">
+    <h2 data-rv>思想的高度，<br>来自实践的深度</h2>
+    <p class="lede" data-rv style="--d:120ms">从正定的一纸规定，到新时代的自我革命，变的是问题与尺度，不变的是“对着问题去”的方法。</p>
+    <div class="statement" data-rv style="--d:200ms">
+      <span>小结 · 一句话</span>
+      <p>一个政党最难的，不是解决别人指出的问题，而是自己发现自己的问题，并且自己动手解决它。</p>
+    </div>
+    <div class="qs" data-rv style="--d:280ms">
+      <div><em>Q1</em><p>为什么党建思想必须“从实践中来”？如果跳过基层阶段直接讲理论，会失去什么？</p></div>
+      <div><em>Q2</em><p>“制度治党”与“自我革命”是什么关系？制度能否替代自我革命，或反之？</p></div>
+      <div><em>Q3</em><p>五个阶段中，哪一步对你理解“战略思维”最关键？请用一个具体细节说明。</p></div>
+    </div>
+    <div class="close__seal" id="seal" aria-hidden="true">自我<br>革命</div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot__row wrap"><span>课堂展示 · 习近平党建思想中的战略思维</span><span>资料整理 / 2026</span></div>
+</footer>
+
+<script>
+(function(){
+  var $ = function(s,c){ return (c||document).querySelector(s); };
+  var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── reveal ── */
+  var hero = $('.hero');
+  if(hero){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ hero.classList.add('in'); }); }); }
+  var items = $$('[data-rv]');
+  if('IntersectionObserver' in window && !reduce){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{rootMargin:'-8% 0px -12% 0px',threshold:.06});
+    items.forEach(function(el){
+      // 图版自身被 clip-path 裁成 0 面积，IO 测不到；改观察它所在的章节
+      if(el.classList.contains('plate')) return;
+      io.observe(el);
+    });
+    var pio = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          $$('.plate', e.target).forEach(function(p){ p.classList.add('in'); });
+          pio.unobserve(e.target);
+        }
+      });
+    },{rootMargin:'-2% 0px -8% 0px',threshold:.02});
+    $$('.ch').forEach(function(ch){ pio.observe(ch); });
+  } else {
+    items.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ── accordion ── */
+  $$('.doc').forEach(function(d){
+    var btn = $('.doc__h', d);
+    btn.addEventListener('click', function(){
+      var open = !d.classList.contains('open');
+      d.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  });
+
+  /* ── progress · timeline · parallax ── */
+  var bar = $('#bar'), tl = $('#tl'), tlFill = $('#tlFill'), bandIn = $('#bandIn'),
+      tlItems = tl ? $$('li', tl) : [], plates = $$('.plate__in');
+  var ticking = false;
+  function frame(){
+    ticking = false;
+    var y = window.pageYOffset, h = document.documentElement.scrollHeight - window.innerHeight;
+    if(bar) bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, y / h) : 0) + ')';
+
+    if(tl && tlFill){
+      var r = tl.getBoundingClientRect();
+      var p = (window.innerHeight * .84 - r.top) / (r.height + window.innerHeight * .28);
+      p = Math.max(0, Math.min(1, p));
+      tlFill.style.setProperty('--p', p.toFixed(3));
+      var n = Math.min(tlItems.length, Math.ceil(p * tlItems.length + .3));
+      tlItems.forEach(function(li,i){ li.classList.toggle('on', i < n); });
+    }
+    if(!reduce){
+      plates.forEach(function(el){
+        var r = el.parentElement.getBoundingClientRect();
+        if(r.bottom < -240 || r.top > window.innerHeight + 240) return;
+        var t = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+        el.style.transform = 'translate3d(0,' + (t * 44).toFixed(2) + 'px,0)';
+      });
+      if(bandIn){
+        var br = bandIn.parentElement.getBoundingClientRect();
+        if(br.bottom > -200 && br.top < window.innerHeight + 200){
+          var bt = (br.top + br.height / 2 - window.innerHeight / 2) / window.innerHeight;
+          bandIn.style.transform = 'translate3d(0,' + (bt * 52).toFixed(2) + 'px,0)';
+        }
+      }
+    }
+  }
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(frame); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  frame();
+
+  /* ── nav spy ── */
+  var nav = $('.nav'), links = $$('.nav a'),
+      secs = links.map(function(a){ return $(a.getAttribute('href')); }),
+      mediaEls = $$('.band, .plate--photo, .hero__photo, #close');
+  function spy(){
+    var mid = window.innerHeight * .45, idx = 0;
+    secs.forEach(function(s,i){ if(s && s.getBoundingClientRect().top <= mid) idx = i; });
+    links.forEach(function(a,i){ a.classList.toggle('on', i === idx); });
+    var nr = nav.getBoundingClientRect(), light = false;
+    mediaEls.forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.bottom > nr.top - 12 && r.top < nr.bottom + 12 && r.right > nr.left - 12 && r.left < nr.right + 12) light = true;
+    });
+    nav.classList.toggle('light', light);
+  }
+  window.addEventListener('scroll', spy, {passive:true});
+  spy();
+
+  /* ── dim tilt + glow ── */
+  if(!reduce && window.matchMedia('(hover:hover)').matches){
+    $$('.dim').forEach(function(card){
+      card.addEventListener('pointermove', function(e){
+        var r = card.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+        card.style.setProperty('--mx', (x*100).toFixed(1) + '%');
+        card.style.setProperty('--my', (y*100).toFixed(1) + '%');
+        card.style.transform = 'perspective(900px) rotateY(' + ((x-.5)*3).toFixed(2) + 'deg) rotateX(' + ((.5-y)*2.2).toFixed(2) + 'deg)';
+      });
+      card.addEventListener('pointerleave', function(){ card.style.transform = ''; });
+    });
+  }
+
+  /* ── seal ── */
+  var seal = $('#seal');
+  if(seal && 'IntersectionObserver' in window){
+    var so = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); so.unobserve(e.target); } });
+    },{threshold:.4});
+    so.observe(seal);
+  } else if(seal){ seal.classList.add('in'); }
+})();
+</script>
+
+
+<script>
+/* ══════════ 文字轨迹：鼠标扫过随机浮现七种思维 ══════════ */
+(function(){
+  var stage = document.getElementById('cursorstage');
+  if(!stage) return;
+  var layer = stage.querySelector('.dstage__layer');
+  var WORDS = [['01','战略思维'],['02','历史思维'],['03','辩证思维'],['04','系统思维'],
+               ['05','创新思维'],['06','法治思维'],['07','底线思维']];
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var MAX = 8, SPACING = 176, EXIT = 520, IDLE = 620, REACH = 8 * 176;
+
+  function make(i){
+    var el = document.createElement('span');
+    el.className = 'cw';
+    var num = document.createElement('i');
+    num.textContent = WORDS[i][0];
+    el.appendChild(num);
+    el.appendChild(document.createTextNode(WORDS[i][1]));
+    return el;
+  }
+
+  /* 静态铺陈：减少动效或无精确指针时，把七个词摆成两行 */
+  function staticScene(){
+    var narrow = window.innerWidth < 760;
+    var pts = narrow
+      ? [[28, 22], [72, 22], [28, 40], [72, 40], [28, 58], [72, 58], [50, 78]]
+      : [[13, 34], [31, 26], [49, 40], [67, 30], [84, 44], [28, 68], [62, 72]];
+    pts.forEach(function(p, i){
+      var el = make(i);
+      el.classList.add('cw--static');
+      el.style.left = p[0] + '%';
+      el.style.top  = p[1] + '%';
+      el.style.transform = 'translate(-50%,-50%) rotate(' + (((i % 3) - 1) * 2.2) + 'deg)';
+      layer.appendChild(el);
+    });
+  }
+  if(reduce || !window.matchMedia('(hover:hover)').matches){ staticScene(); return; }
+
+  var stamps = [], last = null, travel = 0, total = 0, lastIdx = -1, idleAt = 0, raf = 0, clock = 0, prev = 0;
+
+  function place(st, now){
+    var age = (now - st.born) / 1000;
+    var p = Math.min(1, age / 0.42);
+    var pop = 1 + (p - 1) * (p - 1) * (2.6 * (p - 1) + 1.6);   // backOut
+    var alpha = Math.min(1, age / 0.12);
+    var scale = pop;
+    /* 越靠尾端越小越淡 */
+    var rank = Math.min(1, Math.max(0, (total - st.total) / REACH));
+    scale *= 1 - .34 * rank;
+    alpha *= 1 - .58 * rank;
+    if(st.died){
+      var g = Math.min(1, (now - st.died) / EXIT);
+      var e = g * g * g * (g * (g * 6 - 15) + 10);
+      scale *= 1 - .5 * e;
+      alpha *= 1 - e;
+    }
+    var sway = Math.min(1, age / 0.6) * 3.4;
+    var x = st.x + Math.sin(clock * 1.4 + st.seed) * sway;
+    var y = st.y + Math.cos(clock * 1.1 + st.seed * 1.7) * sway;
+    st.el.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0) translate(-50%,-50%) rotate(' +
+      st.rot.toFixed(2) + 'deg) scale(' + scale.toFixed(3) + ')';
+    st.el.style.opacity = alpha.toFixed(3);
+    return !(st.died && (now - st.died) >= EXIT);
+  }
+
+  function frame(now){
+    raf = 0;
+    var dt = Math.min(.05, (now - prev) / 1000) || 0; prev = now;
+    clock += dt;
+    if(now - idleAt > IDLE){
+      stamps.forEach(function(s){ if(!s.died) s.died = now; });
+    }
+    for(var i = stamps.length - 1; i >= 0; i--){
+      if(!place(stamps[i], now)){ stamps[i].el.remove(); stamps.splice(i, 1); }
+    }
+    if(stamps.length) raf = requestAnimationFrame(frame);
+  }
+  function wake(){ if(!raf){ prev = performance.now(); raf = requestAnimationFrame(frame); } }
+
+  function stamp(x, y){
+    var idx;
+    do { idx = Math.floor(Math.random() * WORDS.length); } while(idx === lastIdx && WORDS.length > 1);
+    lastIdx = idx;
+    var el = make(idx);
+    layer.appendChild(el);
+    var st = { el: el, x: x, y: y, rot: Math.random() * 10 - 5, seed: Math.random() * 6.28,
+               total: total, born: performance.now(), died: 0 };
+    stamps.push(st);
+    place(st, st.born);
+    if(stamps.length > MAX){
+      for(var i = 0; i < stamps.length; i++){
+        if(!stamps[i].died){ stamps[i].died = performance.now(); break; }
+      }
+    }
+    wake();
+  }
+
+  stage.addEventListener('pointermove', function(e){
+    var r = stage.getBoundingClientRect();
+    var x = e.clientX - r.left, y = e.clientY - r.top;
+    if(!last){ last = {x: x, y: y}; idleAt = performance.now(); stage.classList.add('is-live'); return; }
+    var d = Math.hypot(x - last.x, y - last.y);
+    travel += d; total += d;
+    last = {x: x, y: y};
+    idleAt = performance.now();
+    stage.classList.add('is-live');
+    if(travel >= SPACING){ travel = 0; stamp(x, y); }
+    wake();
+  }, {passive: true});
+
+  stage.addEventListener('pointerleave', function(){
+    idleAt = 0; wake();
+  });
+
+  /* 未交互时先铺一道淡痕，提示这里可以"划过" */
+  [[13, 72], [30, 60], [47, 47], [64, 36], [81, 26]].forEach(function(p, k){
+    var el = make([0, 2, 3, 5, 6][k]);
+    el.classList.add('cw--ghost');
+    el.style.left = p[0] + '%';
+    el.style.top = p[1] + '%';
+    el.style.transform = 'translate(-50%,-50%) rotate(' + (k % 2 ? 2.2 : -2.6) + 'deg)';
+    layer.appendChild(el);
+  });
+})();
+</script>
+
+<script>
+/* ══════════ 十四个坚持 · 掉落 ══════════ */
+(function(){
+  var stage = document.getElementById('fallStage');
+  if(!stage) return;
+  var block = document.getElementById('fallText');
+  var els = [].slice.call(block.querySelectorAll('.fall__piece'));
+  if(!els.length) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var G = 1050, BOUNCE = .2, IDLE = 5.4, ML = 68, MR = 68;
+  var hover = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  var phase = 'idle', raf = 0, last = 0, timer = 0;
+  var pieces = [], W = 0, H = 0, drag = null, zTop = 10;
+
+  function shuffle(a){
+    for(var i=a.length-1;i>0;i--){ var j=(Math.random()*(i+1))|0, t=a[i]; a[i]=a[j]; a[j]=t; }
+    return a;
+  }
+  function place(p){
+    p.el.style.transform = 'translate3d(' + p.x.toFixed(2) + 'px,' + p.y.toFixed(2) + 'px,0) rotate(' + p.ang.toFixed(4) + 'rad)';
+  }
+  function measure(){
+    var sb = stage.getBoundingClientRect();
+    W = sb.width; H = sb.height;
+    var cs = getComputedStyle(block);
+    ML = MR = W < 900 ? 6 : Math.max(16, parseFloat(cs.paddingLeft) || 16);
+    pieces = els.map(function(el){
+      var r = el.getBoundingClientRect();
+      var p = {el:el, x0:r.left-sb.left, y0:r.top-sb.top, w:r.width, h:r.height,
+               x:0, y:0, vx:0, vy:0, ang:0, vang:0, done:false, live:false, at:0, bounces:0};
+      el.__piece = p;
+      return p;
+    });
+  }
+  /* 高度图：只按块的中段占地，允许两端悬挑，堆叠更像随手一叠 */
+  var heights = null, CW = 8, NCOL = 0;
+  function spanOf(p){
+    var a = p.x + p.w * .42, b = p.x + p.w * .58;
+    return [Math.max(0, Math.floor(a / CW)), Math.min(NCOL - 1, Math.floor(b / CW))];
+  }
+  function buildMap(){
+    NCOL = Math.max(1, Math.ceil(W / CW) + 1);
+    heights = new Float32Array(NCOL);
+    heights.fill(H - 26);
+  }
+  function groundAt(p){
+    var s = spanOf(p), g = H - 26;
+    for(var i=s[0];i<=s[1];i++) if(heights[i] < g) g = heights[i];
+    return g;
+  }
+  function occupy(p){
+    var s = spanOf(p);
+    for(var i=s[0];i<=s[1];i++) if(p.y < heights[i]) heights[i] = p.y;
+  }
+  /* 拖动时重算：被拿走的块不再支撑别人 */
+  function rebuildMap(){
+    heights.fill(H - 26);
+    for(var i=0;i<pieces.length;i++){
+      var p = pieces[i];
+      if(p.done && p !== (drag && drag.p)) occupy(p);
+    }
+  }
+  function frame(t){
+    raf = 0;
+    if(phase !== 'falling') return;
+    var dt = Math.min(.036, last ? (t - last)/1000 : 1/60);
+    last = t;
+    var moving = false;
+
+    for(var i=0;i<pieces.length;i++){
+      var p = pieces[i];
+      if(p.grabbed){ moving = true; continue; }
+
+      if(!p.done && !p.live){
+        if(t >= p.at) p.live = true;
+        else { moving = true; continue; }
+      }
+
+      if(p.live){
+        p.vy += G * dt;
+        p.x += p.vx * dt;
+        p.y += p.vy * dt;
+        p.ang += p.vang * dt;
+        if(p.ang > .09) p.ang = .09;
+        if(p.ang < -.09) p.ang = -.09;
+
+        var g = groundAt(p);
+        if(p.y + p.h >= g){
+          p.y = g - p.h;
+          if(p.vy > 300 && p.bounces < 2){
+            p.vy = -p.vy * BOUNCE; p.vx *= .84; p.vang *= .5; p.bounces++;
+          } else {
+            p.vy = 0; p.vx *= .55; p.vang = 0;
+            if(Math.abs(p.vx) < 30){ p.done = true; p.live = false; p.rest = (Math.random() - .5) * .07; occupy(p); }
+          }
+        }
+        if(p.x < ML){ p.x = ML; p.vx = Math.abs(p.vx) * .45; }
+        else if(p.x + p.w > W - MR){ p.x = W - MR - p.w; p.vx = -Math.abs(p.vx) * .45; }
+        if(!p.done) moving = true;
+      }
+
+      if(p.done && Math.abs(p.ang - p.rest) > .001){
+        p.ang += (p.rest - p.ang) * (1 - Math.pow(.004, dt));
+        moving = true;
+      }
+      place(p);
+    }
+
+    if(moving) raf = requestAnimationFrame(frame);
+    else if(!hover){
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        if(phase === 'falling') restore();
+      }, IDLE * 1000);
+    }
+  }
+  function fall(){
+    if(phase !== 'idle') return;
+    measure();
+    buildMap();
+    phase = 'falling';
+    stage.setAttribute('data-phase', 'falling');
+    var order = shuffle(pieces.map(function(_, i){ return i; }));
+    var t0 = performance.now();
+    pieces.forEach(function(p, i){
+      p.x = p.x0; p.y = p.y0;
+      p.vx = (Math.random() - .5) * 300; p.vy = 0;
+      p.vang = (Math.random() - .5) * 3.2; p.ang = 0; p.rest = 0;
+      p.done = false; p.live = false; p.bounces = 0;
+      p.at = t0 + order[i] * 58;
+      p.el.style.position = 'absolute';
+      p.el.style.left = '0'; p.el.style.top = '0';
+      p.el.style.width = p.w + 'px'; p.el.style.height = p.h + 'px';
+      p.el.style.margin = '0';
+      place(p);
+    });
+    last = 0;
+    raf = requestAnimationFrame(frame);
+  }
+  function restore(){
+    if(phase !== 'falling') return;
+    phase = 'returning';
+    cancelAnimationFrame(raf); raf = 0;
+    clearTimeout(timer);
+    var ease = 'cubic-bezier(.22,1.26,.34,1)';
+    var order = pieces.slice().sort(function(a, b){ return b.y - a.y; });
+    var runs = order.map(function(p, k){
+      var from = 'translate3d(' + p.x.toFixed(2) + 'px,' + p.y.toFixed(2) + 'px,0) rotate(' + p.ang.toFixed(4) + 'rad)';
+      var to = 'translate3d(' + p.x0 + 'px,' + p.y0 + 'px,0) rotate(0rad)';
+      p.el.style.transform = to;
+      return p.el.animate([{transform:from}, {transform:to}],
+        {duration:720, delay:Math.min(k * 9, 190), easing:ease, fill:'backwards'});
+    });
+    Promise.all(runs.map(function(a){ return a.finished.catch(function(){}); })).then(function(){
+      if(phase !== 'returning') return;
+      reset();
+      /* 回位时光标又停在页内：再落一次 */
+      if(hover && stage.matches(':hover')){
+        setTimeout(function(){ if(phase === 'idle') fall(); }, 140);
+      }
+    });
+  }
+  function reset(){
+    phase = 'idle';
+    stage.removeAttribute('data-phase');
+    stage.classList.remove('is-drag');
+    drag = null;
+    pieces.forEach(function(p){
+      p.el.getAnimations().forEach(function(a){ a.cancel(); });
+      p.el.style.cssText = '';
+      p.el.style.transform = '';
+      p.el.style.zIndex = '';
+    });
+    els.forEach(function(el){ el.__piece = null; });
+    pieces = [];
+  }
+
+  /* ── 拖动 ── */
+  function pieceOf(node){
+    while(node && node !== stage){
+      if(node.__piece) return node.__piece;
+      node = node.parentNode;
+    }
+    return null;
+  }
+  function onDown(e){
+    if(phase !== 'falling' || drag) return;
+    var p = pieceOf(e.target);
+    if(!p) return;
+    e.preventDefault();
+    var r = stage.getBoundingClientRect();
+    drag = {p:p, ox:(e.clientX - r.left) - p.x, oy:(e.clientY - r.top) - p.y,
+            px:e.clientX, py:e.clientY, t:performance.now(), vx:0, vy:0};
+    p.grabbed = true;
+    p.live = false; p.done = false; p.vx = 0; p.vy = 0; p.vang = 0;
+    p.el.style.zIndex = ++zTop;
+    rebuildMap();
+    stage.classList.add('is-drag');
+  }
+  function onMove(e){
+    if(!drag) return;
+    e.preventDefault();
+    var r = stage.getBoundingClientRect(), p = drag.p;
+    p.x = Math.max(ML, Math.min(W - MR - p.w, e.clientX - r.left - drag.ox));
+    p.y = Math.max(0, Math.min(H - 26 - p.h, e.clientY - r.top - drag.oy));
+    var now = performance.now(), dt = Math.max(12, now - drag.t);
+    drag.vx = Math.max(-1400, Math.min(1400, (e.clientX - drag.px) / dt * 1000));
+    drag.vy = Math.max(-1400, Math.min(1400, (e.clientY - drag.py) / dt * 1000));
+    drag.px = e.clientX; drag.py = e.clientY; drag.t = now;
+    place(p);
+  }
+  function onUp(){
+    if(!drag) return;
+    var p = drag.p;
+    p.grabbed = false;
+    p.live = true; p.done = false; p.bounces = 0; p.ang = 0; p.rest = 0;
+    p.vx = drag.vx; p.vy = Math.max(0, drag.vy);
+    drag = null;
+    stage.classList.remove('is-drag');
+    last = 0;
+    if(!raf) raf = requestAnimationFrame(frame);
+  }
+  function endDrag(){
+    if(!drag) return;
+    drag.p.grabbed = false;
+    drag = null;
+    stage.classList.remove('is-drag');
+  }
+
+  stage.addEventListener('pointerenter', function(){
+    if(hover && phase === 'idle') fall();
+  });
+  stage.addEventListener('pointerleave', function(){
+    if(!hover) return;
+    endDrag();
+    if(phase === 'falling') restore();
+  });
+  stage.addEventListener('pointerdown', onDown);
+  window.addEventListener('pointermove', onMove, {passive:false});
+  window.addEventListener('pointerup', onUp);
+  window.addEventListener('pointercancel', onUp);
+
+  if(!hover && 'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      var e = es[es.length - 1];
+      if(e.intersectionRatio >= .35 && phase === 'idle') fall();
+    }, {threshold:[.35]}).observe(stage);
+  }
+})();
+</script>
+
+<script>
+/* ══════════ 片头：文字遮罩 + 滚动放大 ══════════ */
+(function(){
+  var film = document.getElementById('film');
+  if(!film) return;
+  var pin  = film.querySelector('.film__pin'),
+      mask = document.getElementById('filmMask'),
+      full = document.getElementById('filmFull'),
+      veil = document.getElementById('filmVeil'),
+      hint = film.querySelector('.film__hint'),
+      t1   = document.getElementById('filmT1'),
+      t2   = document.getElementById('filmT2'),
+      vMask = document.getElementById('filmVideo'),
+      reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      started = false;
+
+  /* 从有红色场景的段落开始播，避免一上来是一片白纸 */
+  function seekStart(v){
+    if(!v || v.dataset.seeked) return;
+    v.dataset.seeked = '1';
+    try { v.currentTime = 18.8; } catch(e){}
+  }
+  [vMask, full].forEach(function(v){
+    if(!v) return;
+    if(v.readyState >= 1) seekStart(v);
+    else v.addEventListener('loadedmetadata', function(){ seekStart(v); }, {once:true});
+    if(reduce && v.pause) v.pause();
+  });
+
+  function layout(){
+    var w = pin.clientWidth, h = pin.clientHeight;
+    var two = w < 820;
+    var size = two ? Math.min(w * .86 / 7, h * .17) : Math.min(w * .93 / 13, h * .245);
+    var y1 = two ? h / 2 - .18 * size : h / 2 + .35 * size;
+    var y2 = two ? h / 2 + size : -99999;
+    t1.textContent = two ? '习近平党建思想' : '习近平党建思想下的战略思维';
+    t2.textContent = two ? '下的战略思维' : '';
+    [[t1, y1], [t2, y2]].forEach(function(pair){
+      var el = pair[0];
+      el.setAttribute('font-size', size.toFixed(1));
+      el.setAttribute('x', (w / 2).toFixed(1));
+      el.setAttribute('y', pair[1].toFixed(1));
+    });
+  }
+
+  function smooth(a, b, x){
+    var t = Math.min(1, Math.max(0, (x - a) / (b - a)));
+    return t * t * (3 - 2 * t);
+  }
+
+  var ticking = false;
+  function update(){
+    ticking = false;
+    var vh = pin.offsetHeight;
+    var total = film.offsetHeight - vh;
+    var r = film.getBoundingClientRect();
+    var p = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+
+    document.body.classList.toggle('is-film', r.top <= 2 && r.bottom >= vh * .2);
+
+    var s = reduce ? 1 : 1 + p * p * 6.4;
+    mask.style.transform = 'scale(' + s.toFixed(4) + ')';
+    var fo = smooth(.6, .86, p);
+    full.style.opacity = fo.toFixed(3);
+    veil.style.opacity = (fo * .92).toFixed(3);
+    mask.style.opacity = (1 - smooth(.58, .8, p)).toFixed(3);
+    document.getElementById('filmSheet').style.opacity = smooth(.66, .97, p).toFixed(3);
+    hint.style.opacity = p < .04 ? '1' : '0';
+
+    if(!started && (fo > .02 || reduce)){
+      started = true;
+      var play = full.play && full.play();
+      if(play && play.catch) play.catch(function(){});
+    }
+  }
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
+
+  layout(); update();
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', function(){ layout(); update(); });
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(function(){ layout(); update(); }).catch(function(){});
+  }
+})();
+</script>
+</body>
+</html>
