@@ -1,0 +1,686 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CASA MOMO 鈥?鎺掔増涓庡姩鏁堟媶瑙?/title>
+<style>
+  :root{
+    --cream:#FFF0CA;
+    --blush:#FFE3D4;
+    --ink:#0E1201;
+    --clay:#BC6F45;
+    --line-dark:rgba(255,240,202,.18);
+    --line-light:rgba(14,18,1,.16);
+    --sans:"Helvetica Neue",Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    --serif:Georgia,"Times New Roman","Songti SC",serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--ink);color:var(--cream);
+    font-family:var(--sans);font-size:16px;line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:1440px;margin:0 auto;padding:0 48px}
+  .sec{padding:150px 0}
+  .sec--light{background:var(--cream);color:var(--ink)}
+  .sec--clay{background:var(--clay);color:var(--ink)}
+  .rule{height:1px;background:var(--line-dark);margin:0}
+  .sec--light .rule,.sec--clay .rule{background:var(--line-light)}
+
+  /* ---------- eyebrow / headings ---------- */
+  .eyebrow{
+    display:flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+    opacity:.7;margin:0 0 34px;
+  }
+  .eyebrow b{
+    font-weight:500;display:inline-grid;place-items:center;
+    min-width:22px;height:22px;padding:0 6px;
+    border:1px solid currentColor;border-radius:2px;
+    font-size:11px;letter-spacing:0;opacity:.85;
+  }
+  h2{
+    font-family:var(--sans);font-weight:400;
+    font-size:clamp(52px,9.4vw,135px);line-height:.94;
+    letter-spacing:-.02em;margin:0 0 28px;
+  }
+  h3{
+    font-size:clamp(26px,2.9vw,42px);line-height:1.04;
+    letter-spacing:-.02em;font-weight:400;margin:0 0 14px;
+  }
+  .lede{
+    font-size:clamp(20px,2.1vw,28.8px);line-height:1.32;
+    letter-spacing:-.007em;max-width:31ch;margin:0;
+  }
+  p{margin:0 0 18px;max-width:62ch}
+  small,.cap{font-size:12px;line-height:1.45;letter-spacing:.01em;opacity:.6}
+  .num{font-family:var(--serif);font-variant-numeric:tabular-nums}
+
+  /* ---------- cover ---------- */
+  .cover{
+    position:relative;height:100svh;min-height:640px;
+    display:grid;grid-template-rows:auto 1fr auto;padding:44px 48px 34px;
+    background:var(--ink);overflow:hidden;
+  }
+  .cover__top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;font-size:14px}
+  .cover__top span{opacity:.62}
+  .cover__mark{
+    grid-row:2;display:flex;flex-direction:column;justify-content:center;
+    font-family:var(--serif);font-weight:400;
+    font-size:clamp(74px,15vw,216px);line-height:.9;letter-spacing:.01em;
+    color:var(--cream);
+  }
+  .cover__mark i{font-style:normal;display:block}
+  .cover__mark i:last-child{align-self:flex-end}
+  .cover__mark i:last-child span{display:inline-block;transform:translateY(.1em)}
+  .cover__bot{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+  .cover__bot p{max-width:30ch;font-size:16px;opacity:.82;margin:0}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--cream);color:var(--ink);text-decoration:none;
+    font-size:15px;padding:8px 11px;border-radius:2px;border:0;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),background .35s;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn--ghost{background:transparent;color:inherit;box-shadow:inset 0 0 0 1px currentColor}
+
+  /* ---------- thesis ---------- */
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-light);border-top:1px solid var(--line-light)}
+  .three>div{background:var(--cream);padding:38px 30px 44px}
+  .three h4{margin:0 0 12px;font-size:var(--sans);font-weight:400;font-size:24px;letter-spacing:-.02em}
+  .three p{font-size:15px;line-height:1.5;margin:0;opacity:.78}
+  .three em{font-family:var(--serif);font-style:normal;font-size:34px;display:block;margin-bottom:22px;opacity:.45}
+
+  /* ---------- type scale ---------- */
+  .scale{border-top:1px solid var(--line-dark);margin-bottom:14px}
+  .scale__row{
+    display:grid;grid-template-columns:92px minmax(0,1fr) auto;gap:24px;align-items:baseline;
+    padding:20px 0;border-bottom:1px solid var(--line-dark);
+  }
+  .scale__row span:first-child{font-size:12px;opacity:.5;font-variant-numeric:tabular-nums}
+  .scale__row span:last-child{font-size:12px;opacity:.5;text-align:right;font-family:var(--mono)}
+  .spec{white-space:nowrap;overflow:hidden;text-overflow:clip;line-height:.95}
+  .spec--serif{font-family:var(--serif);font-size:clamp(48px,9vw,138px);letter-spacing:.005em}
+  .spec--h1{font-size:clamp(44px,8.2vw,126px);letter-spacing:-.02em}
+  .spec--mid{font-size:clamp(30px,5.6vw,86px);letter-spacing:-.02em;line-height:.95}
+  .spec--body{font-size:clamp(17px,1.9vw,26px);letter-spacing:-.007em;white-space:normal;line-height:1.3;max-width:34ch}
+
+  /* ---------- palette ---------- */
+  .chips{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:46px}
+  .chip{height:170px;border-radius:2px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;font-size:12px;line-height:1.5}
+  .chip b{font-weight:500;display:block;font-family:var(--mono);font-size:11px;letter-spacing:.02em}
+  .chip--cream{background:var(--cream);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(14,18,1,.14)}
+  .chip--ink{background:var(--ink);color:var(--cream)}
+  .chip--clay{background:var(--clay);color:#2a1509}
+  .chip--blush{background:var(--blush);color:var(--ink)}
+
+  /* ---------- grid demo ---------- */
+  .griddemo{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 12px;margin-top:44px}
+  .griddemo div{background:rgba(14,18,1,.08);border:1px solid var(--line-light);border-radius:2px;position:relative}
+  .griddemo div::after{content:attr(data-n);position:absolute;left:10px;top:8px;font-size:11px;opacity:.45;font-family:var(--mono)}
+  .gd--sq{aspect-ratio:1/1}
+  .gd--wide{aspect-ratio:3/2}
+  .gd--hole{background:transparent;border-style:dashed}
+  .gridmeta{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:34px}
+  .gridmeta div{border-top:1px solid var(--line-light);padding-top:12px}
+  .gridmeta b{display:block;font-family:var(--serif);font-size:40px;line-height:1;font-weight:400;letter-spacing:-.01em}
+  .gridmeta small{display:block;margin-top:8px}
+
+  /* ---------- figures ---------- */
+  .fig{margin:0}
+  .fig img{border-radius:3px;box-shadow:0 30px 80px -40px rgba(0,0,0,.6)}
+  .fig figcaption{margin-top:12px;font-size:12px;line-height:1.5;opacity:.62;display:flex;gap:12px}
+  .fig figcaption b{font-weight:500;opacity:.9}
+  .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .strip figure{margin:0}
+  .strip img{border-radius:2px}
+  .strip figcaption{margin-top:9px;font-size:11px;opacity:.55;line-height:1.4}
+  .two{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .two--wide{grid-template-columns:1.35fr .65fr;align-items:start}
+
+  /* ---------- motion table ---------- */
+  .mtable{width:100%;border-collapse:collapse;font-size:14.5px;margin-top:10px}
+  .mtable th,.mtable td{text-align:left;padding:17px 16px;border-bottom:1px solid var(--line-light);vertical-align:top}
+  .mtable th{font-weight:400;font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.55;padding-bottom:12px}
+  .mtable td:first-child{width:20%;font-weight:500}
+  .mtable td:nth-child(3){width:34%}
+  .mtable code{font-family:var(--mono);font-size:12.5px;background:rgba(14,18,1,.06);padding:1px 5px;border-radius:2px}
+  .mtable tr:hover td{background:rgba(14,18,1,.03)}
+
+  /* ---------- timeline ---------- */
+  .tl{margin:52px 0 0;position:relative;padding-top:56px}
+  .tl__rail{position:absolute;left:0;right:0;top:40px;height:1px;background:var(--line-dark)}
+  .tl__marks{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+  .tl__marks>div{position:relative;padding-right:18px}
+  .tl__marks>div::before{
+    content:"";position:absolute;left:0;top:-19px;width:9px;height:9px;border-radius:50%;
+    background:var(--clay);transform:translateY(-1px);
+  }
+  .tl__marks b{display:block;font-family:var(--mono);font-size:11.5px;opacity:.6;margin-bottom:7px}
+  .tl__marks p{font-size:13.5px;line-height:1.45;margin:0;opacity:.85;max-width:22ch}
+
+  /* ---------- code ---------- */
+  .codes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:48px}
+  .codes>*{min-width:0}
+  .code{min-width:0;background:#080B00;border:1px solid rgba(255,240,202,.14);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+  .code h5{margin:0;padding:14px 18px;font-size:13px;font-weight:500;letter-spacing:.01em;border-bottom:1px solid rgba(255,240,202,.12);display:flex;justify-content:space-between;gap:12px}
+  .code h5 em{font-style:normal;font-family:var(--mono);font-size:10.5px;opacity:.45;letter-spacing:.06em;text-transform:uppercase}
+  .code pre{margin:0;padding:18px;overflow:auto;font-family:var(--mono);font-size:12.5px;line-height:1.65;color:#E8DCB4}
+  .code pre b{color:#D89B6E;font-weight:400}
+  .code pre i{color:#9DA07A;font-style:normal}
+  .code p{margin:0;padding:0 18px 16px;font-size:12.5px;line-height:1.5;opacity:.6}
+
+  /* ---------- verdict ---------- */
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line-light);margin-top:44px}
+  .cols>div{background:var(--cream);padding:34px 32px 38px}
+  .cols h4{margin:0 0 20px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;opacity:.65}
+  .cols ol{margin:0;padding-left:1.2em;font-size:15.5px;line-height:1.55}
+  .cols li{margin-bottom:14px;padding-left:4px}
+  .cols li b{font-weight:500}
+
+  /* ---------- footer ---------- */
+  .foot{background:var(--clay);color:var(--ink);overflow:hidden;padding-top:110px}
+  .foot__mark{
+    font-family:var(--serif);font-size:clamp(120px,26vw,380px);line-height:.78;
+    white-space:nowrap;letter-spacing:-.005em;transform:translateX(-4%);
+    opacity:.96;margin-bottom:-.12em;
+  }
+  .foot__row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:12.5px;padding:26px 0 30px;margin-top:40px;border-top:1px solid rgba(14,18,1,.22)}
+  .foot__row span{opacity:.75}
+
+  @media (max-width:1000px){
+    .wrap{padding:0 24px}
+    .cover{padding:28px 24px 26px}
+    .sec{padding:96px 0}
+    .two,.two--wide{grid-template-columns:1fr;gap:34px}
+    .three{grid-template-columns:1fr}
+    .chips{grid-template-columns:repeat(2,1fr)}
+    .strip{grid-template-columns:repeat(2,1fr)}
+    .gridmeta{grid-template-columns:repeat(2,1fr)}
+    .codes{grid-template-columns:1fr}
+    .cols{grid-template-columns:1fr}
+    .tl__marks{grid-template-columns:1fr 1fr;gap:26px 0}
+    .tl__rail{display:none}
+    .mtable{font-size:13px}
+    .mtable td:first-child{width:26%}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<header class="cover">
+  <div class="cover__top">
+    <span>妗堜緥鎷嗚В 路 2026.11</span>
+    <span>www.casamomo.at 路 Framer 寤虹珯</span>
+  </div>
+
+  <div class="cover__mark" aria-label="CASA MOMO">
+    <i><span>CASA</span></i>
+    <i><span>MOMO</span></i>
+  </div>
+
+  <div class="cover__bot">
+    <p>涓€闂村彧鍋?9 濂楀叕瀵撶殑鏍兼媺鑼ㄦ皯瀹匡紝鎶婃暣绔欏仛鎴愪簡<b>涓€娆＄┛杩囨埧瀛愮殑婕父</b>锛氬瓧鏍囧垎瑁傘€侀€愯瘝鐐逛寒銆佷簲灞忛毀閬撱€備笅闈㈡槸瀹冪殑鎺掔増绯荤粺銆佸姩鏁堝弬鏁帮紝浠ュ強鍙鍒荤殑閮ㄥ垎銆?/p>
+    <a class="btn" href="#thesis">寮€濮嬫媶瑙?鈫?/a>
+  </div>
+</header>
+
+<!-- ================= THESIS ================= -->
+<section class="sec sec--light" id="thesis">
+  <div class="wrap">
+    <p class="eyebrow"><b>01</b> 鍏堣缁撹</p>
+    <h2>涓変釜鍒ゆ柇</h2>
+    <p class="lede" style="margin-bottom:64px">瀹冭吹姘旓紝涓嶆槸鍥犱负鍏冪礌澶氾紝鑰屾槸鍥犱负姣忓睆鍙厑璁镐竴涓康澶达紝骞朵笖鎵€鏈夊姩鏁堥兘浠庡悓涓€涓墿鐞嗙洿瑙夊嚭鍙戙€?/p>
+
+    <div class="three">
+      <div>
+        <em>鈪?/em>
+        <h4>瀛楁爣灏辨槸鍙欎簨楠ㄦ灦</h4>
+        <p>寮€鍦?CASA 涓?MOMO 鍚堟垚涓€琛岋紝鍐嶅瑙掑垎瑁傚埌宸︿笂銆佸彸涓嬶紱婊氬姩鍚庣缉鎴愬鑸皬瀛楁爣锛涢〉鑴氬張浠?2525px 瀹姐€佽宸﹀彸瑁佸垏鐨勫法瀛楁爣鏀跺熬銆備竴涓厓绱犮€佷笁涓昂搴︼紝棣栧熬闂幆銆?/p>
+      </div>
+      <div>
+        <em>鈪?/em>
+        <h4>涓夎壊鎼炲畾鍏ㄧ珯</h4>
+        <p>濂舵补 #FFF0CA銆佽繎榛戞﹦姒?#0E1201銆侀櫠鍦?#BC6F45銆傛病鏈夌浜岀寮鸿皟鑹诧紝闈?b>鏁存鍙嶈壊</b>锛堟繁鈫掓祬鈫掓繁鈫掗櫠鍦燂級鎹㈡皵锛岃€屼笉鏄崲鍥俱€佹崲瑁呴グ銆?/p>
+      </div>
+      <div>
+        <em>鈪?/em>
+        <h4>鍔ㄦ晥鍙湁涓ゆ潯</h4>
+        <p>鍏ㄧ珯鍙敤浜嗐€岄€愯瘝/閫愯娣″叆銆嶅拰銆岄殢婊氬姩浣嶇Щ銆嶄袱绉嶆満鍒讹紝鍔犱笂涓€澶勪簲灞忕殑閫忚闅ч亾浣滀负楂樻疆銆傚厠鍒讹紝鎵€浠ラ偅澶勯珮娼墠鎴愮珛銆?/p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TYPE ================= -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow"><b>02</b> 鎺掔増绯荤粺</p>
+    <h2>瀛楀彿闃舵</h2>
+    <p class="lede" style="margin-bottom:72px">涓ゆ瀛椾綋鍒嗗伐骞插噣锛欵L PACRE锛堥珮瀵规瘮琛嚎锛夊彧缁欏瓧鏍囷紝Lay Grotesk锛堜腑鎬ф棤琛嚎锛夋壙鎷呭叾浣欎竴鍒囥€傚瓧鍙蜂笉鏄瓑姣旂骇鏁帮紝鑰屾槸<b>鍏釜閽夋鐨勬。浣?/b>銆?/p>
+
+    <div class="scale">
+      <div class="scale__row">
+        <span>180 / 216</span>
+        <span class="spec spec--serif">CASA MOMO</span>
+        <span>EL PACRE 路 浠呴灞?/span>
+      </div>
+      <div class="scale__row">
+        <span>135 / 135</span>
+        <span class="spec spec--h1">Locations</span>
+        <span>Lay Grotesk 路 -2%</span>
+      </div>
+      <div class="scale__row">
+        <span>112.5 / 106.9</span>
+        <span class="spec spec--mid">a space emerges</span>
+        <span>闄堣堪鍙?路 琛岄珮 0.95</span>
+      </div>
+      <div class="scale__row">
+        <span>72 / 72</span>
+        <span class="spec spec--mid" style="font-size:clamp(30px,5.2vw,80px)">Apartments</span>
+        <span>鍖哄潡鏍囩 路 -1.5%</span>
+      </div>
+      <div class="scale__row">
+        <span>28.8 / 34.6</span>
+        <span class="spec spec--body">I am the head and heart behind Casa Momo and hosting is what I love most.</span>
+        <span>姝ｆ枃 路 -0.2px</span>
+      </div>
+      <div class="scale__row">
+        <span>21.6 / 25.9</span>
+        <span class="spec spec--body" style="font-size:clamp(15px,1.5vw,21.6px)">"Moritz's apartment is fantastic! The location couldn't be better."</span>
+        <span>鍗＄墖 / 璇勮</span>
+      </div>
+      <div class="scale__row">
+        <span>16 / 19.2</span>
+        <span class="spec spec--body" style="font-size:16px">Apartments 路 About 路 Contact 路 Book Now 鈫?/span>
+        <span>瀵艰埅 / 鎸夐挳</span>
+      </div>
+    </div>
+
+    <div class="two" style="margin-top:80px;align-items:start">
+      <div>
+        <h3>涓ゆ潯纭鍒?/h3>
+        <p><b>涓€銆佸瓧瓒婂ぇ锛岃楂樿秺绱с€?/b>112.5px 鐨勯檲杩板彞鐢?0.95 琛岄珮锛?06.9px锛夛紝135px 鏍囬鐢?1.0銆傚瓧灏忓埌 28.8px 鎵嶅洖鍒?1.2銆傚ぇ瀛楄璺濅竴鏃︽斁鏉惧氨鏁ｆ灦锛屾敹绱у悗澶氳鏂囧瓧鎵嶄細琚鎴愪竴鍧?b>鐏伴潰</b>鑰屼笉鏄彞瀛愩€?/p>
+        <p><b>浜屻€佸瓧瓒婂ぇ锛屽瓧璺濊秺璐熴€?/b>135px 鐢?鈭?.7px锛堚垝2%锛夛紝112.5px 鍚屾牱 鈭?.7px銆傚ぇ瀛楃殑榛樿瀛楄窛鍦ㄨ瑙変笂鏄?婕忔皵"鐨勶紝鏀?2% 鎵嶄細鏄惧緱绱у疄銆?/p>
+        <p style="opacity:.7;font-size:14px">鎸夐挳鐨勫昂瀵镐篃寰堝厠鍒讹細<code style="font-family:var(--mono);font-size:12.5px">padding:7px 10px</code>銆佸渾瑙?<code style="font-family:var(--mono);font-size:12.5px">2px</code>銆佸瓧鍙?16px鈥斺€斿嚑涔庢槸涓?璐寸焊"锛屼笉璺熷ぇ鏍囬鎶㈡垙銆?/p>
+      </div>
+      <div>
+        <h3>鍥涜壊 + 涓ゆ灇鍙犲姞</h3>
+        <p>璋冭壊鏉垮彧鏈夊洓涓€硷紝鍏朵腑娴呯矇鍙嚭鐜板湪璇勮鍗＄殑搴曡壊涓娿€傜湡姝ｆ拺浣忚川鎰熺殑鏄袱鏋?b>鍗婇€忔槑鍙犲姞鑹?/b>锛氬ザ娌?7%銆侀櫠鍦?10%锛岄兘閰?<code style="font-family:var(--mono);font-size:12.5px">backdrop-filter: blur(8px)</code>銆?/p>
+        <div class="chips">
+          <div class="chip chip--cream"><b>#FFF0CA</b>濂舵补 / 涓绘枃瀛?/div>
+          <div class="chip chip--ink"><b>#0E1201</b>杩戦粦姗勬 / 搴?/div>
+          <div class="chip chip--clay"><b>#BC6F45</b>闄跺湡 / 椤佃剼</div>
+          <div class="chip chip--blush"><b>#FFE3D4</b>娴呯矇 / 鍗＄墖</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GRID ================= -->
+<section class="sec sec--light">
+  <div class="wrap">
+    <p class="eyebrow"><b>03</b> 缃戞牸</p>
+    <h2>闈?娲?鎺掕妭濂?/h2>
+    <div class="two two--wide">
+      <div>
+        <p class="lede" style="margin-bottom:26px">1440 瀹戒笅锛氶〉杈硅窛 48锛屽弻鍒楀悇 666锛屽垪闂磋窛鍙湁 12銆傜湡姝ｅ喅瀹氳鎰熺殑鏄?b>琛岃窛 128</b> 涓?b>涓ょ鐢诲箙浜ゆ浛</b>鈥斺€?:1 涓?3:2 鐩搁偦锛岀煭鐨勯偅鏍间笅鏂瑰氨鐣欎笅涓€涓?350px 鐨勭┖娲炪€?/p>
+        <p>涔濅釜鍏瘬鍗曟暟缁撳熬锛屾渶鍚庝竴鏍肩嫭鍗犲乏鍒楋紝鍙冲垪鏁寸墖绌虹潃銆傝繖浜涙礊涓嶆槸澶辫锛屾槸鍏ㄧ珯鍛煎惛鐨勮妭濂忕偣锛氳绾胯绌烘礊鎷界潃寰€涓嬭蛋锛岃€屼笉鏄鏁撮綈鐨勭綉鏍煎钩鎺ㄣ€?/p>
+        <p style="opacity:.7;font-size:14px">鍗＄墖鏍囬琛屽浐瀹?42px 楂橈細宸﹀悕绉般€佸彸涓ゆ灇鎻忚竟鑳跺泭锛堥潰绉?/ 浜烘暟锛夈€備俊鎭彧鐢?16px 绾у瓧鍙凤紝鍥剧墖鑷繁璇磋瘽銆?/p>
+        <div class="gridmeta">
+          <div><b>48</b><small>椤佃竟璺?/small></div>
+          <div><b>12</b><small>鍒楅棿璺?/small></div>
+          <div><b>128</b><small>琛岄棿璺?/small></div>
+          <div><b>2:1</b><small>1:1 涓?3:2 浜ゆ浛</small></div>
+        </div>
+      </div>
+      <div>
+        <div class="griddemo" style="margin-top:0">
+          <div class="gd--sq" data-n="01"></div>
+          <div class="gd--wide" data-n="02"></div>
+          <div class="gd--wide" data-n="03"></div>
+          <div class="gd--sq" data-n="04"></div>
+          <div class="gd--sq" data-n="05"></div>
+          <div class="gd--wide" data-n="06"></div>
+          <div class="gd--wide" data-n="07"></div>
+          <div class="gd--sq" data-n="08"></div>
+          <div class="gd--sq" data-n="09"></div>
+          <div class="gd--hole" data-n="鈥?></div>
+        </div>
+        <p class="cap" style="margin-top:12px">閿欒惤鏉ヨ嚜鐢诲箙浜ゆ浛 + 椤堕儴瀵归綈锛屼笉鏉ヨ嚜鎵嬪姩閿欎綅銆?/p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LAYOUT MOVES ================= -->
+<section class="sec sec--light" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow"><b>04</b> 浜斾釜鍙鐨勬墜娉?/p>
+    <h2>鎺掔増鐨勬墜娉?/h2>
+
+    <div style="display:grid;gap:96px;margin-top:56px">
+
+      <div class="two">
+        <figure class="fig">
+          <img src=".oil-ui/casamomo/shots/s01-780.png" alt="闄堣堪鍙ュ尯鍧楋細棣栬宸﹀榻愩€佸叾浣欒鍙冲榻?>
+          <figcaption><b>鈶?娣峰悎瀵归綈</b><span>棣栬宸﹂《杈癸紝鍏朵綑鍏ㄩ儴鍙冲榻?/span></figcaption>
+        </figure>
+        <div>
+          <h3>鎶婂彸瀵归綈鐨勬瘺杈?br>褰撴垚鍥惧舰</h3>
+          <p>闄堣堪鍙?5 琛岋細绗?1 琛屼粠 x=48 宸﹀榻愶紝2鈥? 琛岀粺缁熷彸瀵归綈鍒?1392銆傚彸瀵归綈鐣欎笅涓€鏉￠敮榻跨姸鐨勫乏杈癸紝姝ｅソ鍜岄琛屽舰鎴愪竴涓悜涓嬬殑鏂滃垏銆?/p>
+          <p>缁撴灉鏄細瀹冩棦涓嶆槸灞呬腑鐨?娴锋姤鍙?锛屼篃涓嶆槸宸﹀榻愮殑"姝ｆ枃"锛岃€屾槸涓€鍧?b>鏂滅潃钀戒笅鏉ョ殑瀛楀潡</b>銆傚疄鐜板彧瑕佷袱琛?CSS鈥斺€?code style="font-family:var(--mono);font-size:12.5px">text-align:right</code>锛岄琛屽崟鐙?<code style="font-family:var(--mono);font-size:12.5px">left</code>銆?/p>
+        </div>
+      </div>
+
+      <div class="two" style="direction:rtl">
+        <figure class="fig" style="direction:ltr">
+          <img src=".oil-ui/casamomo/shots/s19-14820.png" alt="涓夊紶鍝插鍗￠樁姊紡閿欎綅锛岄灏惧嚭琛€">
+          <figcaption><b>鈶?闃舵鍗＄墖</b><span>472脳411锛寈=0 / 484 / 968锛屾瘡寮犱笅绉?100px</span></figcaption>
+        </figure>
+        <div style="direction:ltr">
+          <h3>闃舵 + 鍑鸿</h3>
+          <p>涓夊紶鍗″ 472銆侀棿闅?12锛岀涓€寮犺创姝诲乏杈圭紭銆佺涓夊紶璐存鍙宠竟缂樷€斺€斾袱绔嚭琛€锛屼腑闂翠袱寮犳敹绱с€傜旱鍚戞瘡寮犲啀涓嬬Щ 100px銆?/p>
+          <p>闃舵涓嶆槸涓轰簡娲绘臣锛屾槸涓轰簡璁╀笁寮犲悓灏哄鐨勫崱鍦?b>瑙嗙嚎鎵繃鏃朵緷娆′寒璧?/b>锛氳绗竴寮犳椂绗笁寮犺繕娌¤繘瑙嗗彛銆備笁寮犲崱杩樺悇鐢ㄤ竴绉嶅簳鑹诧紙娣?/ 闄跺湡 / 濂舵补锛夛紝鎶?涓夌鐞嗗康"鐩存帴缂栫爜鎴愰鑹层€?/p>
+        </div>
+      </div>
+
+      <div class="two">
+        <figure class="fig">
+          <img src=".oil-ui/casamomo/shots/s24-18720.png" alt="闄跺湡鑹查〉鑴氾紝宸ㄥ瀷濂舵补瀛楁爣琚乏鍙宠鍒?>
+          <figcaption><b>鈶?宸ㄥ瀷瑁佸垏瀛楁爣</b><span>2525px 瀹斤紝x = 鈭?43锛屼袱绔兘琚垏鎺?/span></figcaption>
+        </figure>
+        <div>
+          <h3>璁╁畠澶у埌瑁呬笉涓?/h3>
+          <p>椤佃剼瀛楁爣瀹?2525px锛屽鍣?1440鈥斺€斿乏鍙冲悇琚垏鎺変竴澶у潡锛屽彧鐣欎笅 "A MOMO" 鐨勪腑娈点€傝繖鏄叏绔欐渶渚垮疁銆佷篃鏈€鏈夋晥鐨?璐?锛氫笉闈犵壒鏁堬紝闈?b>灏哄害澶辨帶</b>銆?/p>
+          <p>瀹冨悓鏃跺畬鎴愬彊浜嬮棴鐜細寮€鍦烘妸 CASA 涓?MOMO 鍒嗗紑锛岀粨灏炬妸瀹冧滑閲嶆柊鎸ゅ湪涓€琛屻€佸啀鎸ゅ嚭鐢婚潰銆傛暣绔欏洜姝ゆ湁浜嗛灏俱€?/p>
+        </div>
+      </div>
+
+      <div class="two" style="direction:rtl">
+        <figure class="fig" style="direction:ltr">
+          <img src=".oil-ui/casamomo/shots/s02-1560.png" alt="婊″箙鍦嗚鍥句笌娴湪鍙充笅瑙掔殑涓や釜鑳跺泭鏍囩">
+          <figcaption><b>鈶?婊″箙鍥句笌鑳跺泭鏍囩</b><span>婊″箙 + 澶у渾瑙掞紝鍙充笅娴袱鏋氬崐閫忔槑鏍囩</span></figcaption>
+        </figure>
+        <div style="direction:ltr">
+          <h3>婊″箙鍥惧仛鍋滈】</h3>
+          <p>姣忎釜澶ф钀戒箣闂存彃涓€寮?1440脳900 鐨勬弧骞呭浘锛屽渾瑙掔害 48px锛屽彸涓嬭娴袱鏋氳兌鍥婏紙"Boutique N掳3" / "Living Room"锛夈€傚畠鎵挎媴涓変欢浜嬶細鎹㈡皵銆佺粰瑙嗗樊涓€涓浇浣撱€佹妸"鎴块棿"杩欎欢浜嬪弽澶嶈涓€閬嶃€?/p>
+          <p>鑳跺泭鐨勫簳鑹插拰瀵艰埅涓€鑷粹€斺€斿ザ娌?7% + 8px 妯＄硦銆傚悓涓€涓潗璐ㄥ湪鍏ㄧ珯鍙嶅鍑虹幇锛屾槸寤変环浣嗘瀬鏈夋晥鐨勭粺涓€鎵嬫銆?/p>
+        </div>
+      </div>
+
+      <div class="two">
+        <figure class="fig">
+          <img src=".oil-ui/casamomo/shots/s08-6240.png" alt="鍏瘬缃戞牸鏈€鍚庝竴椤圭嫭鍗犲乏鍒楋紝鍙冲垪鐣欑┖">
+          <figcaption><b>鈶?鍗曟暟缁撳熬</b><span>9 濂楀叕瀵擄紝鏈€鍚庝竴鏍肩嫭鍗犲乏鍒?/span></figcaption>
+        </figure>
+        <div>
+          <h3>璁╃┖鐨勯偅鍗婅竟<br>鎴愪负涓€鍙ヨ瘽</h3>
+          <p>9 鏄崟鏁帮紝缃戞牸蹇呯劧鍓╀笅鍗婅竟銆傚鏁扮珯鐐逛細鎶婂畠灞呬腑銆佹垨琛ヤ竴寮?CTA 鍗°€傝繖閲屼粈涔堥兘涓嶈ˉ鈥斺€旂┖鐧藉氨杩欎箞鐣欑潃锛岀劧鍚庢帴涓€涓法澶х殑 "Hi, I'm Moritz"銆?/p>
+          <p>鐣欑櫧鍦ㄨ繖閲屼笉鏄?娌℃帓婊?锛岃€屾槸<b>閫楀彿</b>锛氬憡璇夎鑰咃紝鍏瘬閮ㄥ垎缁撴潫浜嗐€?/p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= MOTION ================= -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow"><b>05</b> 鍔ㄦ晥绯荤粺</p>
+    <h2>涓€鍦?3.4 绉?br>鐨勫紑鍦?/h2>
+    <p class="lede" style="margin-bottom:20px">杞藉叆鍚庡厛鏄?0.7 绉掔函榛戯紝鐒跺悗瀛楁爣鍑虹幇銆佸悎鎷€佸垎瑁傗€斺€旀墍鏈夌殑鎴忓墽鎬ч兘鍘嬪湪杩欎笁绉掑崐閲岋紝涔嬪悗鍏ㄧ珯鍐嶆病鏈変竴澶?琛ㄦ紨鎬?鍔ㄧ敾锛屽彧鏈変綅绉诲拰娣″叆銆?/p>
+
+    <div class="tl">
+      <div class="tl__rail"></div>
+      <div class="tl__marks">
+        <div><b>0 鈥?0.70s</b><p>绾粦銆傚彧鐣欏懠鍚革紝涓嶈娴忚鍣ㄧ櫧闂€?/p></div>
+        <div><b>0.85 鈥?1.00s</b><p>CASA MOMO 閫愬瓧姣嶆贰鍏ワ紝鍚堜负涓€琛屽眳涓攣鎺掞紙x 169鈥?271锛夈€?/p></div>
+        <div><b>1.00 鈥?2.40s</b><p>閿佹帓淇濇寔銆佺紦鎱㈡斁澶с€傝繖鏄?鎸変綇"鐨勪竴鎷嶃€?/p></div>
+        <div><b>2.40 鈥?3.40s</b><p>涓よ瘝瀵硅鍒嗚锛欳ASA 鍒?(48,10)锛孧OMO 鍒?(822,680)锛屽悇甯?1.15s 闀垮熬缂撳姩銆?/p></div>
+        <div><b>3.40s +</b><p>瑙嗛娣″叆銆傚叏鐗囪繘鍏?姝ｅ父閫熷害"銆?/p></div>
+      </div>
+    </div>
+
+    <div class="strip" style="margin-top:70px">
+      <figure><img src=".oil-ui/casamomo/shots/enter-06-900ms.png" alt="0.9 绉掞細瀛楁爣鍚堜负涓€琛?><figcaption>0.9s 路 鍚堟嫝閿佹帓</figcaption></figure>
+      <figure><img src=".oil-ui/casamomo/shots/enter-08-2200ms.png" alt="2.2 绉掞細瀛楁爣寮€濮嬪垎瑁?><figcaption>2.2s 路 寮€濮嬪垎瑁?/figcaption></figure>
+      <figure><img src=".oil-ui/casamomo/desktop-1440.png" alt="缁堟€侊細CASA 宸︿笂銆丮OMO 鍙充笅"><figcaption>缁堟€?路 瀵硅鍗犱綅</figcaption></figure>
+      <figure><img src=".oil-ui/casamomo/shots/s12-9360.png" alt="闅ч亾锛氶亾鍏蜂笌鏂囧瓧鍦?z 杞翠笂绌挎彃"><figcaption>闅ч亾 路 楂樻疆娈佃惤</figcaption></figure>
+    </div>
+
+    <h3 style="margin:110px 0 6px">鍏ㄧ珯鍔ㄦ晥娓呭崟</h3>
+    <table class="mtable">
+      <thead>
+        <tr><th></th><th>瑙﹀彂</th><th>鏈哄埗</th><th>瀹炴祴鍙傛暟</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>瀛楁爣鍒嗚</td><td>杞藉叆</td>
+          <td>涓や釜璇嶅潡鍏堝悎涓轰竴琛屽眳涓紝鍐嶅悇鑷綅绉诲埌瀵硅锛涙瘡鍧楀唴閮ㄥ瓧姣嶉€愪釜娣″叆</td>
+          <td><code>180/216px</code>锛涘垎瑁傝法搴?1210脳670px锛涙椂闀跨害 1.0s锛岄暱灏?ease-out</td>
+        </tr>
+        <tr>
+          <td>棣栧睆瑙嗛閫€鍦?/td><td>婊氬姩 0鈥?00px</td>
+          <td>鏁村潡闅忔粴鍔ㄦ贰鍑哄苟杞诲井鏀惧ぇ锛岃浜烘劅瑙?娌夊叆"椤甸潰</td>
+          <td><code>opacity 1鈫?.2</code>锛?code>scale 1鈫?.03</code>锛岀嚎鎬ц窡鎵?/td>
+        </tr>
+        <tr>
+          <td>瀵艰埅鑳跺泭</td><td>瓒婅繃棣栧睆</td>
+          <td>閾炬帴鑳屽悗娴嚭鍗婇€忔槑鑳跺泭锛屼笉鍑虹幇鏁存潯瀵艰埅鏍?/td>
+          <td><code>rgba(255,240,202,.07)</code> + <code>blur(8px)</code>锛涙祬鑹插尯鎹㈡垚 <code>rgba(189,131,70,.1)</code></td>
+        </tr>
+        <tr>
+          <td>閫愯瘝鐐逛寒</td><td>杩涘叆瑙嗗彛</td>
+          <td>姣忎釜璇嶆槸涓€涓?span锛屽垵濮嬮€忔槑搴?0.15锛屾寜椤哄簭鍗囧埌 1锛涗笉鍔犱綅绉?/td>
+          <td>鍩虹鍊?<code>0.15</code>锛涜瘝闂撮敊寮€绾?40鈥?0ms锛涙娈佃惤浠庨琛屼寒鍒版湯琛岀害 1.2s</td>
+        </tr>
+        <tr>
+          <td>婊″箙鍥捐宸?/td><td>婊氬姩</td>
+          <td>鍥剧墖鍦ㄥ渾瑙掑鍣ㄥ唴姣斿鍣ㄦ洿楂橈紝闅忔粴鍔ㄧ紦鎱綅绉?/td>
+          <td>瀹瑰櫒 1440脳900锛屽渾瑙掔害 48px锛涗綅绉诲箙搴︾害涓烘粴鍔ㄩ噺鐨?10鈥?5%</td>
+        </tr>
+        <tr>
+          <td>鏂囧瓧婊氬姩鎮仠</td><td>hover</td>
+          <td>鍚屼竴涓瘝鍙犱笁浠芥斁鍦ㄦ孩鍑虹殑鐩掑瓙閲岋紝鎮诞鏃舵暣浣撲笂婊氫竴琛?/td>
+          <td>浣嶇Щ <code>鈭?0.4px</code> = 1 涓楂橈紱涓変唤鏂囨湰 <code>translateY 0/100%/200%</code></td>
+        </tr>
+        <tr>
+          <td>璇勮妯悜婕傜Щ</td><td>婊氬姩</td>
+          <td>妯悜杞ㄩ亾闅忕旱鍚戞粴鍔ㄥ弽鍚戝钩绉伙紝鏍囬涓庡崱鐗囧悓杞?/td>
+          <td>姣忔粴 1px 杞ㄩ亾 `<code>translateX +0.2px</code>`锛涜建閬撳惈 5 寮?532px 鍗?+ 72px 鏍囬</td>
+        </tr>
+        <tr>
+          <td>閫忚闅ч亾</td><td>婊氬姩锛坰ticky锛?/td>
+          <td>100vh 鑸炲彴閽変綇 5 灞忥紝8 涓姞鍥鹃亾鍏峰湪 perspective 瀹瑰櫒閲屾部 Z 杞撮杩?/td>
+          <td>瀹炴祴閬撳叿锛?6px鈫?61px锛埫?0锛夛紝绂讳腑蹇冪殑鍋忕Щ 55px鈫?42px锛?b>缂╂斁涓庡亸绉诲悓姣?/b></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="two" style="margin-top:96px">
+      <div>
+        <h3>闅ч亾涓轰粈涔堟垚绔?/h3>
+        <p>瀹冧笉鏄?澶氫釜鍏冪礌鍚勮嚜鍔ㄧ敾"锛岃€屾槸涓€涓湡鐨勯€忚绌洪棿锛氫竴琛?CSS <code style="font-family:var(--mono);font-size:12.5px">perspective: 900px</code>锛屾瘡涓亾鍏峰彧鏀?<code style="font-family:var(--mono);font-size:12.5px">translateZ</code>锛屾祻瑙堝櫒鑷姩绠楀嚭"杩戝ぇ杩滃皬 + 鍚戝杈愬皠"銆?/p>
+        <p>鎴戦噺浜嗗叾涓竴涓亾鍏凤細灏哄浠?46px 娑ㄥ埌 461px锛埫?0锛夛紝鍚屾椂瀹冪鑸炲彴涓績鐨勫亸绉讳粠 55px 鍙樻垚 542px锛埫?.8锛夆€斺€?b>涓や釜鍊嶆暟涓€鑷?/b>锛岃繖灏辨槸閫忚鎶曞奖鐨勬寚绾广€傚畠涓嶆槸鎵嬪啓 keyframe 鑳藉仛鐨勬晥鏋溿€?/p>
+        <p>鏂囧瓧鍥哄畾鍦?z=0锛岄亾鍏蜂粠 z 璐熷€奸鍚戞鍊硷紝浜庢槸鏈夌殑浠庢枃瀛楀悗闈㈤捇鍑烘潵銆佹湁鐨勪粠鍓嶉潰鎿﹁繃鍘伙紝绌垮府鎰熻鍘嬪埌鏈€浣庛€?/p>
+      </div>
+      <div>
+        <svg viewBox="0 0 520 420" style="width:100%;height:auto" role="img" aria-label="闅ч亾閫忚绀烘剰">
+          <defs>
+            <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6" fill="none" stroke="#BC6F45" stroke-width="1.2"/>
+            </marker>
+          </defs>
+          <rect x="0" y="0" width="520" height="420" fill="none"/>
+          <circle cx="260" cy="210" r="3" fill="#BC6F45"/>
+          <text x="272" y="206" fill="#FFF0CA" opacity=".55" font-family="monospace" font-size="10">vanishing point (720,450)</text>
+          <g stroke="#FFF0CA" stroke-opacity=".18" fill="none">
+            <path d="M260,210 L60,50"/><path d="M260,210 L470,80"/><path d="M260,210 L80,360"/><path d="M260,210 L450,330"/>
+          </g>
+          <g fill="none" stroke="#BC6F45">
+            <rect x="237" y="193" width="46" height="34" stroke-opacity=".35"/>
+            <rect x="206" y="164" width="108" height="92" stroke-opacity=".6"/>
+            <rect x="120" y="70" width="280" height="280" stroke-opacity=".95"/>
+          </g>
+          <g fill="#FFF0CA" font-family="monospace" font-size="10" opacity=".6">
+            <text x="300" y="190">z = 鈭?00 路 46px</text>
+            <text x="320" y="160">z = 鈭?00 路 108px</text>
+            <text x="410" y="66">z = 鈭?0 路 280px</text>
+          </g>
+          <text x="260" y="214" fill="#0E1201" font-family="Helvetica,Arial" font-size="13" text-anchor="middle" dy="-14">Feel at Home.</text>
+          <text x="60" y="405" fill="#FFF0CA" opacity=".45" font-family="monospace" font-size="10">scale = p / (p 鈭?z) 路 p = 900</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RHYTHM ================= -->
+<section class="sec sec--light">
+  <div class="wrap">
+    <p class="eyebrow"><b>06</b> 椤甸潰鑺傚</p>
+    <h2>21 灞忥紝<br>涓€涓康澶翠竴灞?/h2>
+    <div class="two two--wide" style="align-items:start">
+      <div>
+        <p class="lede" style="margin-bottom:30px">鍏ㄩ〉 19159px锛屽湪 1440 瑙嗗彛涓嬫濂?21.3 灞忋€傚尯鍧楅珮搴﹀嚑涔庨兘鏄暣灞忕殑鍊嶆暟鎴栦竴鍗婏細900 / 854 / 900 / 1358 / 4500 / 748 / 900 / 731 鈥?/p>
+        <p>娌℃湁涓€灞忓湪鍚屾椂璁蹭袱浠朵簨銆傞毀閬撶嫭鍗?5 灞忋€佸叕瀵撶綉鏍肩嫭鍗?4.8 灞忥紝涓棿鐢ㄦ弧骞呭浘鍜岀┖鐧介殧寮€鈥斺€旈暱搴︾殑鍒嗛厤锛屽氨鏄畠琛ㄨ揪杞婚噸鐨勬柟寮忋€?/p>
+      </div>
+      <div style="border-top:1px solid var(--line-light)">
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px"><span>Hero</span><span class="num">900 / 1.0 灞?/span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px"><span>闄堣堪鍙?/span><span class="num">854 / 0.95</span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px"><span>鍏瘬缃戞牸</span><span class="num">4340 / 4.8</span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px"><span>鍏充簬 Moritz</span><span class="num">1358 / 1.5</span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px"><span>闅ч亾</span><span class="num">4500 / 5.0</span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px"><span>鐞嗗康涓夊崱</span><span class="num">731 / 0.8</span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px"><span>璇勮</span><span class="num">1184 / 1.3</span></div>
+        <div style="display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line-light);font-size:14px"><span>椤佃剼</span><span class="num">933 / 1.0</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RECIPES ================= -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow"><b>07</b> 鍙鍒?/p>
+    <h2>鍥涙閰嶆柟</h2>
+    <p class="lede" style="margin-bottom:10px">閮借兘鐩存帴鎼埌椤圭洰閲屻€傚墠涓ゆ鏄?鑺辩殑閽辨渶灏戙€佹晥鏋滄渶濂?鐨勶紝鍚庝袱娈垫槸瀹冪湡姝ｇ殑鎶€鏈簳鐗屻€?/p>
+
+    <div class="codes">
+      <div class="code">
+        <h5>鏂囧瓧婊氬姩鎮仠 <em>1 涓楂?/em></h5>
+<pre><b>.roll</b>{display:inline-block;overflow:hidden;height:1.27em}
+<b>.roll span</b>{
+  display:block;
+  transition:transform .42s cubic-bezier(.2,.7,.2,1);
+}
+<b>.roll span:nth-child(2)</b>{transform:translateY(100%)}
+
+<b>.roll:hover span:nth-child(1)</b>{transform:translateY(-100%)}
+<b>.roll:hover span:nth-child(2)</b>{transform:translateY(0)}</pre>
+        <p>瀵艰埅椤规偓鍋滄椂鏁翠綋涓婃粴涓€琛岋紝瀹炴祴浣嶇Щ灏辨槸 1 涓楂橈紙16px 鈫?20.4px锛夈€備笁浠芥枃鏈彔鍦ㄥ悓涓€鏍奸噷锛岀湅璧锋潵鍍忔枃瀛楀湪"鎹㈡皵"銆?/p>
+      </div>
+
+      <div class="code">
+        <h5>閫愯瘝鐐逛寒 <em>鍩虹鍊?0.15</em></h5>
+<pre><b>.line span</b>{
+  opacity:.15;                     <i>/* 涓嶆槸 0 */</i>
+  transition:opacity .55s ease;
+}
+<b>.line.in span</b>{opacity:1}
+<b>.line.in span:nth-child(n)</b>{
+  transition-delay:calc(var(--i) * 45ms);
+}</pre>
+        <p>鍩哄簳 0.15 鑰屼笉鏄?0锛氭湭鐐逛寒鐨勮瘝浠嶇劧"鍦ㄥ満"锛岀増闈笉浼氬湪鍔ㄧ敾涓闄枫€傝繖鏄畠鐪嬭捣鏉ヤ粠瀹圭殑鎶€鏈師鍥犮€?/p>
+      </div>
+
+      <div class="code">
+        <h5>閫忚闅ч亾 <em>sticky + translateZ</em></h5>
+<pre><b>.stage</b>{height:500vh}              <i>/* 5 灞忔粴鍔?*/</i>
+<b>.pin</b>{
+  position:sticky;top:0;height:100svh;
+  perspective:900px;overflow:hidden;
+}
+<b>.prop</b>{
+  position:absolute;left:50%;top:50%;
+  translate:-50% -50%;
+  transform:translateZ(var(--z));
+  will-change:transform;
+}</pre>
+        <p>鍙敼 <code>--z</code>锛岀缉鏀句笌"鍚戝椋?鐢遍€忚鑷姩绠楀嚭锛屼笉鐢ㄩ€愬抚绠?x/y銆?b>鍦?z 鎺ヨ繎 p 涔嬪墠缁撴潫鍔ㄧ敾</b>锛屽惁鍒欓亾鍏蜂細琚斁澶у埌鏃犵┓銆?/p>
+      </div>
+
+      <div class="code">
+        <h5>鍒嗗尯鍙嶈壊 <em>鎹㈡皵涓嶆崲鍥?/em></h5>
+<pre><b>section[data-theme]</b>{
+  --bg:#0E1201; --fg:#FFF0CA;
+  background:var(--bg); color:var(--fg);
+  transition:background .5s, color .5s;
+}
+<b>section[data-theme="light"]</b>{
+  --bg:#FFF0CA; --fg:#0E1201;
+}
+<b>.pill</b>{
+  background:color-mix(in srgb, var(--fg) 7%, transparent);
+  backdrop-filter:blur(8px);
+}</pre>
+        <p>鑳跺泭搴曡壊璺熺潃 <code>--fg</code> 璧帮紝娣辨祬涓や釜鍖鸿嚜鍔ㄦ垚绔嬧€斺€斾笉蹇呬负娴呰壊鍖哄崟鐙啓涓€濂楀鑸牱寮忋€?/p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VERDICT ================= -->
+<section class="sec sec--light">
+  <div class="wrap">
+    <p class="eyebrow"><b>08</b> 鍒ゆ柇</p>
+    <h2>鍊煎緱鎶勶紝<br>鍜屽埆鎶勭殑</h2>
+    <div class="cols">
+      <div>
+        <h4>鍊煎緱鎶?/h4>
+        <ol>
+          <li><b>璁╀竴涓厓绱犺疮绌垮叏绔欎笁涓昂搴︺€?/b>棣栧睆 180px 鈫?瀵艰埅 27px 鈫?椤佃剼 380px 涓旇瑁佸垏銆傛垚鏈瀬浣庯紝璁板繂鐐规瀬楂樸€?/li>
+          <li><b>鐢ㄦ暣娈靛弽鑹蹭唬鏇胯楗般€?/b>涓夎壊 + 鍒嗗尯鍙嶈壊锛屽氨鑳借 21 灞忎笉閲嶅銆?/li>
+          <li><b>缃戞牸闈犵敾骞呬氦鏇垮拰绌烘礊銆?/b>涓嶈"鎵嬫姈閿欎綅"锛岃"瑙勫垯閿欎綅"锛?:1 / 3:2 浜ゆ浛 + 椤堕儴瀵归綈锛屾礊鏄畻鍑烘潵鐨勩€?/li>
+          <li><b>鍙暀涓€绉嶅叆鍦哄姩鏁堛€佷竴绉嶆粴鍔ㄨ瘝鏁堛€?/b>鐒跺悗璁╁叾涓竴澶勶紙闅ч亾锛夊仛鍒版瀬鑷淬€?/li>
+          <li><b>鍗婇€忔槑鑳跺泭 + 8px 妯＄硦銆?/b>鍦ㄤ换浣曠収鐗囥€佷换浣曞簳鑹蹭笂閮芥垚绔嬶紝姣斿疄鑹叉潯瀹夊叏寰楀銆?/li>
+        </ol>
+      </div>
+      <div>
+        <h4>鍒妱 / 瑕佷粯浠ｄ环</h4>
+        <ol>
+          <li><b>21 灞忋€? 灞忛毀閬撱€?/b>绉诲姩绔粛鏈?15025px 楂樸€傚彊浜嬪瀷绔欑偣鍙互锛屽伐鍏峰瀷/杞寲鍨嬬珯鐐逛細琚烦鍑虹巼鎯╃綒銆?/li>
+          <li><b>0.15 鐨勬鏂囧熀搴曢€忔槑搴︺€?/b>鑷姩妫€娴嬫姤浜?38 澶勫姣斿害浣庝簬 3:1鈥斺€斿叏鍦ㄦ湭鐐逛寒鐨勮瘝涓娿€傝繖鏄姩鏁堜腑闂存€侊紝浣嗗璇诲睆涓庝綆瑙嗗姏鐢ㄦ埛浠嶆槸璐熸媴锛屽缓璁粰 <code style="font-family:var(--mono);font-size:12.5px">prefers-reduced-motion</code> 涓€涓?鐩存帴鍏ㄤ寒"鐨勫垎鏀€?/li>
+          <li><b>112.5px / 0.95 琛岄珮銆?/b>鍙鐭彞鎴愮珛銆傛崲鎴愪腑鏂囬暱娈佃惤銆佹垨闇€瑕佷笁琛屼互涓婄殑鍙ュ瓙锛屼細鎸ゅ帇鍒颁笉鍙銆?/li>
+          <li><b>sticky + 瑙嗗樊 + 澶у渾瑙掔殑缁勫悎銆?/b>iOS Safari 鐨勫湴鍧€鏍忛珮搴﹀彉鍖栦細璁?100vh 鑸炲彴璺冲姩锛屽姟蹇呯敤 <code style="font-family:var(--mono);font-size:12.5px">100svh</code> 骞跺疄鏈烘祴璇曘€?/li>
+          <li><b>閫愯瘝鎻ず渚濊禆瑙﹀彂鏃舵満銆?/b>棣栧睆鎶栧姩 / 寮辩綉鏃跺鏄?鏁存绐佺劧浜捣"锛屾瘮涓嶅仛杩橀毦鐪嬨€傜粰涓€涓?<code style="font-family:var(--mono);font-size:12.5px">IntersectionObserver</code> 鐨勫厹搴曟洿绋炽€?/li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="foot__mark" aria-hidden="true">CASA MOMO</div>
+  <div class="wrap">
+    <div class="foot__row">
+      <span>鎷嗚В瀵硅薄 路 casamomo.at锛團ramer锛?026锛?/span>
+      <span>瀹炴祴瑙嗗彛 1440 脳 900 路 鍏ㄩ〉 19159px</span>
+      <span>2026.11</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+

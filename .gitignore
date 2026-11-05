@@ -1,0 +1,8 @@
+# 本地取证与截图工作目录（Puppeteer 脚本、逐屏截图、切片长图）
+.oil-ui/
+
+# 工具缓存
+.curate-cache.json
+Thumbs.db
+desktop.ini
+.DS_Store
